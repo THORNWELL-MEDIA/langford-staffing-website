@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-paper text-brand-ink antialiased;
+    font-feature-settings: "ss01", "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+  .tnum, table, dl, .stat, .data, [data-numeric] {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" on, "lnum" on;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+    color: inherit;
+    font-feature-settings: "kern", "calt";
+  }
+  h1 { @apply font-semibold; }
+  h2 { @apply font-semibold; }
+  h3 { @apply font-semibold; }
+  a {
+    @apply underline-offset-4;
+  }
+  ::selection {
+    background-color: rgba(245, 166, 35, 0.30);
+    color: #06122A;
+  }
+  *:focus-visible {
+    outline: 2px solid #F5A623;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+  .container-brief {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-brand-saffron-dark;
+  }
+  .eyebrow-light {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-brand-saffron;
+  }
+  /* Inline label — no underline, for in-grid / table-row use */
+  .label-inline {
+    @apply inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.20em] text-brand-ink-mute;
+  }
+
+  /* PULL QUOTE — saffron rule on left margin */
+  .pull-quote {
+    @apply pl-5 italic text-brand-ink;
+    border-left: 3px solid theme('colors.brand.saffron');
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-navy px-5 py-3 text-sm font-semibold text-white no-underline transition hover:bg-brand-navy-dark focus:outline-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-brand-line bg-white px-5 py-3 text-sm font-semibold text-brand-navy no-underline transition hover:border-brand-navy focus:outline-none;
+  }
+  .btn-teal {
+    /* Legacy alias - now solid navy */
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-navy px-5 py-3 text-sm font-semibold text-white no-underline transition hover:bg-brand-navy-dark focus:outline-none;
+  }
+  .btn-saffron {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-saffron px-5 py-3 text-sm font-semibold text-brand-navy no-underline transition hover:bg-brand-saffron-dark hover:text-white focus:outline-none;
+  }
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/40 bg-transparent px-5 py-3 text-sm font-semibold text-white no-underline transition hover:border-brand-saffron hover:text-brand-saffron focus:outline-none;
+  }
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-brand-navy/30 bg-transparent px-5 py-3 text-sm font-semibold text-brand-navy no-underline transition hover:border-brand-navy hover:bg-brand-navy hover:text-white focus:outline-none;
+  }
+
+  .section {
+    @apply py-14 sm:py-16 lg:py-20;
+  }
+  .section-tight {
+    @apply py-12 sm:py-14 lg:py-16;
+  }
+
+  .card {
+    @apply rounded-lg border border-brand-line bg-white;
+    transition: border-color 200ms ease;
+  }
+  .card:hover {
+    border-color: theme('colors.brand.navy');
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-brand-navy no-underline transition hover:gap-2.5 hover:text-brand-saffron-dark;
+  }
+  .link-arrow-light {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-white no-underline transition hover:gap-2.5 hover:text-brand-saffron;
+  }
+
+  /* BADGES */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-brand-line bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-ink-soft;
+  }
+  .badge-teal {
+    /* Legacy alias - now navy outline */
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-brand-navy/15 bg-white px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-navy;
+  }
+  .badge-saffron {
+    @apply inline-flex items-center gap-1.5 rounded-sm border border-brand-saffron/30 bg-brand-saffron/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-saffron-dark;
+  }
+  /* Forest = "verified" / "placed" — used SPARINGLY */
+  .badge-verified {
+    @apply inline-flex items-center gap-1.5 rounded-sm bg-brand-forest-light px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-forest;
+  }
+
+  /* INPUTS */
+  .input-base {
+    @apply w-full rounded-sm border border-brand-line bg-white px-4 py-3 text-sm text-brand-ink placeholder:text-brand-ink-light focus:border-brand-navy focus:outline-none focus:ring-0;
+  }
+
+  /* DATA TABLE */
+  .data-table {
+    @apply w-full border-collapse text-sm;
+  }
+  .data-table thead th {
+    @apply bg-brand-navy px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.16em] text-white;
+  }
+  .data-table tbody td {
+    @apply border-b border-brand-line-soft px-4 py-3 text-brand-ink;
+  }
+  .data-table tbody tr:nth-child(even) td {
+    background-color: rgba(245, 242, 232, 0.4);
+  }
+  .data-table tbody tr:hover td {
+    background-color: rgba(245, 166, 35, 0.06);
+  }
+
+  /* SECTION RULES */
+  .rule-saffron {
+    @apply h-px w-full bg-brand-saffron;
+  }
+  .rule-navy {
+    @apply h-px w-full bg-brand-navy;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Tabular numerals utility */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" on, "lnum" on;
+  }
+  /* Briefing column rule */
+  .col-rule-l {
+    border-left: 1px solid theme('colors.brand.line');
+  }
+  .col-rule-r {
+    border-right: 1px solid theme('colors.brand.line');
+  }
+  /* Long-form drop cap — modernist serif */
+  .prose-langford > p:first-of-type::first-letter {
+    font-family: var(--font-plex-serif), Georgia, serif;
+    float: left;
+    font-size: 4.5rem;
+    line-height: 0.92;
+    font-weight: 600;
+    color: #0A1A35;
+    padding: 0.35rem 0.6rem 0.15rem 0;
+    margin-right: 0.2rem;
+  }
+  .scrim-bottom {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(10, 26, 53, 0.10) 0%,
+      rgba(10, 26, 53, 0.55) 55%,
+      rgba(10, 26, 53, 0.92) 100%
+    );
+  }
+  .scrim-radial {
+    background-image: radial-gradient(
+      ellipse at center,
+      rgba(10, 26, 53, 0.10) 0%,
+      rgba(10, 26, 53, 0.70) 100%
+    );
+  }
+  .mask-fade-r {
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+  }
+  .mask-fade-edges {
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+  /* Duotone navy filter for portrait imagery */
+  .duotone-navy {
+    filter: grayscale(100%) brightness(0.95) contrast(1.08) sepia(15%) hue-rotate(190deg) saturate(180%);
+  }
+  /* Briefing-grade horizontal rule above section labels */
+  .top-rule::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 36px;
+    background: theme('colors.brand.navy');
+    margin-bottom: 12px;
+  }
+  .top-rule-light::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 36px;
+    background: theme('colors.brand.saffron');
+    margin-bottom: 12px;
+  }
+}

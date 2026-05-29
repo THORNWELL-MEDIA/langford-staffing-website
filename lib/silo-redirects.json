@@ -1,0 +1,3012 @@
+[
+  {
+    "source": "/locations/arizona/phoenix",
+    "destination": "/phoenix-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/phoenix",
+    "destination": "/phoenix-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/tucson",
+    "destination": "/tucson-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tucson",
+    "destination": "/tucson-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/mesa",
+    "destination": "/mesa-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mesa",
+    "destination": "/mesa-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/chandler",
+    "destination": "/chandler-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/chandler",
+    "destination": "/chandler-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/gilbert",
+    "destination": "/gilbert-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/gilbert",
+    "destination": "/gilbert-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/glendale",
+    "destination": "/glendale-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/glendale",
+    "destination": "/glendale-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/scottsdale",
+    "destination": "/scottsdale-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/scottsdale",
+    "destination": "/scottsdale-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/peoria",
+    "destination": "/peoria-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/peoria",
+    "destination": "/peoria-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/tempe",
+    "destination": "/tempe-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tempe",
+    "destination": "/tempe-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/surprise",
+    "destination": "/surprise-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/surprise",
+    "destination": "/surprise-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/yuma",
+    "destination": "/yuma-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/yuma",
+    "destination": "/yuma-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/goodyear",
+    "destination": "/goodyear-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/goodyear",
+    "destination": "/goodyear-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/buckeye",
+    "destination": "/buckeye-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/buckeye",
+    "destination": "/buckeye-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/avondale",
+    "destination": "/avondale-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/avondale",
+    "destination": "/avondale-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/flagstaff",
+    "destination": "/flagstaff-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/flagstaff",
+    "destination": "/flagstaff-az-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/los-angeles",
+    "destination": "/los-angeles-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/los-angeles",
+    "destination": "/los-angeles-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-diego",
+    "destination": "/san-diego-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/san-diego",
+    "destination": "/san-diego-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-jose",
+    "destination": "/san-jose-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/san-jose",
+    "destination": "/san-jose-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-francisco",
+    "destination": "/san-francisco-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/san-francisco",
+    "destination": "/san-francisco-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/fresno",
+    "destination": "/fresno-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fresno",
+    "destination": "/fresno-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/sacramento",
+    "destination": "/sacramento-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/sacramento",
+    "destination": "/sacramento-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/long-beach",
+    "destination": "/long-beach-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/long-beach",
+    "destination": "/long-beach-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/oakland",
+    "destination": "/oakland-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oakland",
+    "destination": "/oakland-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/bakersfield",
+    "destination": "/bakersfield-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/bakersfield",
+    "destination": "/bakersfield-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/anaheim",
+    "destination": "/anaheim-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/anaheim",
+    "destination": "/anaheim-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/stockton",
+    "destination": "/stockton-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/stockton",
+    "destination": "/stockton-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/riverside",
+    "destination": "/riverside-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/riverside",
+    "destination": "/riverside-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/santa-ana",
+    "destination": "/santa-ana-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/santa-ana",
+    "destination": "/santa-ana-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/irvine",
+    "destination": "/irvine-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/irvine",
+    "destination": "/irvine-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/chula-vista",
+    "destination": "/chula-vista-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/chula-vista",
+    "destination": "/chula-vista-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/fremont",
+    "destination": "/fremont-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fremont",
+    "destination": "/fremont-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/santa-clarita",
+    "destination": "/santa-clarita-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/santa-clarita",
+    "destination": "/santa-clarita-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-bernardino",
+    "destination": "/san-bernardino-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/san-bernardino",
+    "destination": "/san-bernardino-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/modesto",
+    "destination": "/modesto-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/modesto",
+    "destination": "/modesto-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/moreno-valley",
+    "destination": "/moreno-valley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/moreno-valley",
+    "destination": "/moreno-valley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/fontana",
+    "destination": "/fontana-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fontana",
+    "destination": "/fontana-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/oxnard",
+    "destination": "/oxnard-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oxnard",
+    "destination": "/oxnard-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/huntington-beach",
+    "destination": "/huntington-beach-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/huntington-beach",
+    "destination": "/huntington-beach-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/glendale",
+    "destination": "/glendale-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/glendale",
+    "destination": "/glendale-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/santa-rosa",
+    "destination": "/santa-rosa-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/santa-rosa",
+    "destination": "/santa-rosa-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/elk-grove",
+    "destination": "/elk-grove-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/elk-grove",
+    "destination": "/elk-grove-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/ontario",
+    "destination": "/ontario-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario",
+    "destination": "/ontario-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/rancho-cucamonga",
+    "destination": "/rancho-cucamonga-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/rancho-cucamonga",
+    "destination": "/rancho-cucamonga-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/oceanside",
+    "destination": "/oceanside-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oceanside",
+    "destination": "/oceanside-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/lancaster",
+    "destination": "/lancaster-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lancaster",
+    "destination": "/lancaster-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/garden-grove",
+    "destination": "/garden-grove-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/garden-grove",
+    "destination": "/garden-grove-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/palmdale",
+    "destination": "/palmdale-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/palmdale",
+    "destination": "/palmdale-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/salinas",
+    "destination": "/salinas-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/salinas",
+    "destination": "/salinas-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/hayward",
+    "destination": "/hayward-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hayward",
+    "destination": "/hayward-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/corona",
+    "destination": "/corona-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/corona",
+    "destination": "/corona-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/sunnyvale",
+    "destination": "/sunnyvale-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/sunnyvale",
+    "destination": "/sunnyvale-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/pomona",
+    "destination": "/pomona-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pomona",
+    "destination": "/pomona-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/escondido",
+    "destination": "/escondido-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/escondido",
+    "destination": "/escondido-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/roseville",
+    "destination": "/roseville-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/roseville",
+    "destination": "/roseville-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/torrance",
+    "destination": "/torrance-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/torrance",
+    "destination": "/torrance-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/fullerton",
+    "destination": "/fullerton-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fullerton",
+    "destination": "/fullerton-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/visalia",
+    "destination": "/visalia-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/visalia",
+    "destination": "/visalia-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/orange",
+    "destination": "/orange-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/orange",
+    "destination": "/orange-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/pasadena",
+    "destination": "/pasadena-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pasadena",
+    "destination": "/pasadena-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/victorville",
+    "destination": "/victorville-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/victorville",
+    "destination": "/victorville-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/concord",
+    "destination": "/concord-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/concord",
+    "destination": "/concord-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/santa-clara",
+    "destination": "/santa-clara-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/santa-clara",
+    "destination": "/santa-clara-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/thousand-oaks",
+    "destination": "/thousand-oaks-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/thousand-oaks",
+    "destination": "/thousand-oaks-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/simi-valley",
+    "destination": "/simi-valley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/simi-valley",
+    "destination": "/simi-valley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/vallejo",
+    "destination": "/vallejo-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/vallejo",
+    "destination": "/vallejo-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/berkeley",
+    "destination": "/berkeley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/berkeley",
+    "destination": "/berkeley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/clovis",
+    "destination": "/clovis-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/clovis",
+    "destination": "/clovis-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/fairfield",
+    "destination": "/fairfield-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fairfield",
+    "destination": "/fairfield-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/murrieta",
+    "destination": "/murrieta-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/murrieta",
+    "destination": "/murrieta-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/richmond",
+    "destination": "/richmond-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/richmond",
+    "destination": "/richmond-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/antioch",
+    "destination": "/antioch-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/antioch",
+    "destination": "/antioch-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/carlsbad",
+    "destination": "/carlsbad-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/carlsbad",
+    "destination": "/carlsbad-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/costa-mesa",
+    "destination": "/costa-mesa-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/costa-mesa",
+    "destination": "/costa-mesa-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/downey",
+    "destination": "/downey-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/downey",
+    "destination": "/downey-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/ventura",
+    "destination": "/ventura-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ventura",
+    "destination": "/ventura-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/temecula",
+    "destination": "/temecula-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/temecula",
+    "destination": "/temecula-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/santa-maria",
+    "destination": "/santa-maria-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/santa-maria",
+    "destination": "/santa-maria-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/west-covina",
+    "destination": "/west-covina-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/west-covina",
+    "destination": "/west-covina-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/el-monte",
+    "destination": "/el-monte-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/el-monte",
+    "destination": "/el-monte-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/inglewood",
+    "destination": "/inglewood-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/inglewood",
+    "destination": "/inglewood-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/burbank",
+    "destination": "/burbank-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/burbank",
+    "destination": "/burbank-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/el-cajon",
+    "destination": "/el-cajon-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/el-cajon",
+    "destination": "/el-cajon-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-mateo",
+    "destination": "/san-mateo-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/san-mateo",
+    "destination": "/san-mateo-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/jurupa-valley",
+    "destination": "/jurupa-valley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/jurupa-valley",
+    "destination": "/jurupa-valley-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/daly-city",
+    "destination": "/daly-city-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/daly-city",
+    "destination": "/daly-city-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/rialto",
+    "destination": "/rialto-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/rialto",
+    "destination": "/rialto-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/norwalk",
+    "destination": "/norwalk-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/norwalk",
+    "destination": "/norwalk-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/vacaville",
+    "destination": "/vacaville-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/vacaville",
+    "destination": "/vacaville-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/vista",
+    "destination": "/vista-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/vista",
+    "destination": "/vista-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/hesperia",
+    "destination": "/hesperia-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hesperia",
+    "destination": "/hesperia-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/compton",
+    "destination": "/compton-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/compton",
+    "destination": "/compton-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/carson",
+    "destination": "/carson-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/carson",
+    "destination": "/carson-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/mission-viejo",
+    "destination": "/mission-viejo-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mission-viejo",
+    "destination": "/mission-viejo-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/south-gate",
+    "destination": "/south-gate-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/south-gate",
+    "destination": "/south-gate-ca-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/denver",
+    "destination": "/denver-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/denver",
+    "destination": "/denver-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/colorado-springs",
+    "destination": "/colorado-springs-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado-springs",
+    "destination": "/colorado-springs-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/aurora",
+    "destination": "/aurora-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/aurora",
+    "destination": "/aurora-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/fort-collins",
+    "destination": "/fort-collins-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fort-collins",
+    "destination": "/fort-collins-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/lakewood",
+    "destination": "/lakewood-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lakewood",
+    "destination": "/lakewood-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/thornton",
+    "destination": "/thornton-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/thornton",
+    "destination": "/thornton-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/arvada",
+    "destination": "/arvada-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arvada",
+    "destination": "/arvada-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/westminster",
+    "destination": "/westminster-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/westminster",
+    "destination": "/westminster-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/pueblo",
+    "destination": "/pueblo-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pueblo",
+    "destination": "/pueblo-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/greeley",
+    "destination": "/greeley-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/greeley",
+    "destination": "/greeley-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/centennial",
+    "destination": "/centennial-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/centennial",
+    "destination": "/centennial-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/boulder",
+    "destination": "/boulder-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/boulder",
+    "destination": "/boulder-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/longmont",
+    "destination": "/longmont-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/longmont",
+    "destination": "/longmont-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/loveland",
+    "destination": "/loveland-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/loveland",
+    "destination": "/loveland-co-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/jacksonville",
+    "destination": "/jacksonville-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/jacksonville",
+    "destination": "/jacksonville-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/miami",
+    "destination": "/miami-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/miami",
+    "destination": "/miami-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/tampa",
+    "destination": "/tampa-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tampa",
+    "destination": "/tampa-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/orlando",
+    "destination": "/orlando-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/orlando",
+    "destination": "/orlando-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/st--petersburg",
+    "destination": "/st--petersburg-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/st--petersburg",
+    "destination": "/st--petersburg-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/hialeah",
+    "destination": "/hialeah-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hialeah",
+    "destination": "/hialeah-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/port-st--lucie",
+    "destination": "/port-st--lucie-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/port-st--lucie",
+    "destination": "/port-st--lucie-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/tallahassee",
+    "destination": "/tallahassee-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tallahassee",
+    "destination": "/tallahassee-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/cape-coral",
+    "destination": "/cape-coral-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/cape-coral",
+    "destination": "/cape-coral-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/fort-lauderdale",
+    "destination": "/fort-lauderdale-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fort-lauderdale",
+    "destination": "/fort-lauderdale-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/pembroke-pines",
+    "destination": "/pembroke-pines-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pembroke-pines",
+    "destination": "/pembroke-pines-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/hollywood",
+    "destination": "/hollywood-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hollywood",
+    "destination": "/hollywood-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/gainesville",
+    "destination": "/gainesville-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/gainesville",
+    "destination": "/gainesville-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/miramar",
+    "destination": "/miramar-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/miramar",
+    "destination": "/miramar-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/coral-springs",
+    "destination": "/coral-springs-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/coral-springs",
+    "destination": "/coral-springs-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/lehigh-acres",
+    "destination": "/lehigh-acres-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lehigh-acres",
+    "destination": "/lehigh-acres-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/palm-bay",
+    "destination": "/palm-bay-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/palm-bay",
+    "destination": "/palm-bay-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/west-palm-beach",
+    "destination": "/west-palm-beach-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/west-palm-beach",
+    "destination": "/west-palm-beach-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/clearwater",
+    "destination": "/clearwater-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/clearwater",
+    "destination": "/clearwater-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/brandon",
+    "destination": "/brandon-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/brandon",
+    "destination": "/brandon-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/spring-hill",
+    "destination": "/spring-hill-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/spring-hill",
+    "destination": "/spring-hill-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/lakeland",
+    "destination": "/lakeland-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lakeland",
+    "destination": "/lakeland-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/pompano-beach",
+    "destination": "/pompano-beach-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pompano-beach",
+    "destination": "/pompano-beach-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/miami-gardens",
+    "destination": "/miami-gardens-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/miami-gardens",
+    "destination": "/miami-gardens-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/davie",
+    "destination": "/davie-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/davie",
+    "destination": "/davie-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/boca-raton",
+    "destination": "/boca-raton-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/boca-raton",
+    "destination": "/boca-raton-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/sunrise",
+    "destination": "/sunrise-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/sunrise",
+    "destination": "/sunrise-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/deltona",
+    "destination": "/deltona-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/deltona",
+    "destination": "/deltona-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/plantation",
+    "destination": "/plantation-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/plantation",
+    "destination": "/plantation-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/largo",
+    "destination": "/largo-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/largo",
+    "destination": "/largo-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/melbourne",
+    "destination": "/melbourne-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/melbourne",
+    "destination": "/melbourne-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/homestead",
+    "destination": "/homestead-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/homestead",
+    "destination": "/homestead-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/kissimmee",
+    "destination": "/kissimmee-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kissimmee",
+    "destination": "/kissimmee-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/delray-beach",
+    "destination": "/delray-beach-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/delray-beach",
+    "destination": "/delray-beach-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/port-orange",
+    "destination": "/port-orange-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/port-orange",
+    "destination": "/port-orange-fl-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/atlanta",
+    "destination": "/atlanta-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/atlanta",
+    "destination": "/atlanta-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/columbus",
+    "destination": "/columbus-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/columbus",
+    "destination": "/columbus-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/augusta",
+    "destination": "/augusta-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/augusta",
+    "destination": "/augusta-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/macon",
+    "destination": "/macon-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/macon",
+    "destination": "/macon-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/savannah",
+    "destination": "/savannah-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/savannah",
+    "destination": "/savannah-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/athens",
+    "destination": "/athens-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/athens",
+    "destination": "/athens-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/sandy-springs",
+    "destination": "/sandy-springs-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/sandy-springs",
+    "destination": "/sandy-springs-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/south-fulton",
+    "destination": "/south-fulton-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/south-fulton",
+    "destination": "/south-fulton-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/roswell",
+    "destination": "/roswell-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/roswell",
+    "destination": "/roswell-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/johns-creek",
+    "destination": "/johns-creek-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/johns-creek",
+    "destination": "/johns-creek-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/warner-robins",
+    "destination": "/warner-robins-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/warner-robins",
+    "destination": "/warner-robins-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/albany",
+    "destination": "/albany-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/albany",
+    "destination": "/albany-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/alpharetta",
+    "destination": "/alpharetta-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alpharetta",
+    "destination": "/alpharetta-ga-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/chicago",
+    "destination": "/chicago-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/chicago",
+    "destination": "/chicago-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/aurora",
+    "destination": "/aurora-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/aurora",
+    "destination": "/aurora-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/joliet",
+    "destination": "/joliet-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/joliet",
+    "destination": "/joliet-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/naperville",
+    "destination": "/naperville-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/naperville",
+    "destination": "/naperville-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/rockford",
+    "destination": "/rockford-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/rockford",
+    "destination": "/rockford-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/elgin",
+    "destination": "/elgin-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/elgin",
+    "destination": "/elgin-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/springfield",
+    "destination": "/springfield-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/springfield",
+    "destination": "/springfield-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/peoria",
+    "destination": "/peoria-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/peoria",
+    "destination": "/peoria-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/waukegan",
+    "destination": "/waukegan-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/waukegan",
+    "destination": "/waukegan-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/champaign",
+    "destination": "/champaign-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/champaign",
+    "destination": "/champaign-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/cicero",
+    "destination": "/cicero-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/cicero",
+    "destination": "/cicero-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/bloomington",
+    "destination": "/bloomington-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/bloomington",
+    "destination": "/bloomington-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/evanston",
+    "destination": "/evanston-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/evanston",
+    "destination": "/evanston-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/decatur",
+    "destination": "/decatur-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/decatur",
+    "destination": "/decatur-il-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/charlotte",
+    "destination": "/charlotte-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/charlotte",
+    "destination": "/charlotte-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/raleigh",
+    "destination": "/raleigh-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/raleigh",
+    "destination": "/raleigh-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/greensboro",
+    "destination": "/greensboro-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/greensboro",
+    "destination": "/greensboro-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/durham",
+    "destination": "/durham-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/durham",
+    "destination": "/durham-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/winston-salem",
+    "destination": "/winston-salem-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/winston-salem",
+    "destination": "/winston-salem-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/fayetteville",
+    "destination": "/fayetteville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fayetteville",
+    "destination": "/fayetteville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/cary",
+    "destination": "/cary-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/cary",
+    "destination": "/cary-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/wilmington",
+    "destination": "/wilmington-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wilmington",
+    "destination": "/wilmington-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/high-point",
+    "destination": "/high-point-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/high-point",
+    "destination": "/high-point-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/concord",
+    "destination": "/concord-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/concord",
+    "destination": "/concord-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/asheville",
+    "destination": "/asheville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/asheville",
+    "destination": "/asheville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/greenville",
+    "destination": "/greenville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/greenville",
+    "destination": "/greenville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/gastonia",
+    "destination": "/gastonia-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/gastonia",
+    "destination": "/gastonia-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/jacksonville",
+    "destination": "/jacksonville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/jacksonville",
+    "destination": "/jacksonville-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/chapel-hill",
+    "destination": "/chapel-hill-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/chapel-hill",
+    "destination": "/chapel-hill-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/rocky-mount",
+    "destination": "/rocky-mount-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/rocky-mount",
+    "destination": "/rocky-mount-nc-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/newark",
+    "destination": "/newark-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/newark",
+    "destination": "/newark-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/jersey-city",
+    "destination": "/jersey-city-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/jersey-city",
+    "destination": "/jersey-city-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/paterson",
+    "destination": "/paterson-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/paterson",
+    "destination": "/paterson-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/elizabeth",
+    "destination": "/elizabeth-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/elizabeth",
+    "destination": "/elizabeth-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/edison",
+    "destination": "/edison-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/edison",
+    "destination": "/edison-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/lakewood",
+    "destination": "/lakewood-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lakewood",
+    "destination": "/lakewood-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/woodbridge",
+    "destination": "/woodbridge-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/woodbridge",
+    "destination": "/woodbridge-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/toms-river",
+    "destination": "/toms-river-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/toms-river",
+    "destination": "/toms-river-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/hamilton",
+    "destination": "/hamilton-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hamilton",
+    "destination": "/hamilton-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/hamilton-township",
+    "destination": "/hamilton-township-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hamilton-township",
+    "destination": "/hamilton-township-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/trenton",
+    "destination": "/trenton-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/trenton",
+    "destination": "/trenton-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/clifton",
+    "destination": "/clifton-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/clifton",
+    "destination": "/clifton-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/brick-township",
+    "destination": "/brick-township-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/brick-township",
+    "destination": "/brick-township-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/brick",
+    "destination": "/brick-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/brick",
+    "destination": "/brick-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/cherry-hill",
+    "destination": "/cherry-hill-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/cherry-hill",
+    "destination": "/cherry-hill-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/camden",
+    "destination": "/camden-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/camden",
+    "destination": "/camden-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/bayonne",
+    "destination": "/bayonne-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/bayonne",
+    "destination": "/bayonne-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/passaic",
+    "destination": "/passaic-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/passaic",
+    "destination": "/passaic-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/east-orange",
+    "destination": "/east-orange-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/east-orange",
+    "destination": "/east-orange-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/union-city",
+    "destination": "/union-city-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/union-city",
+    "destination": "/union-city-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/middletown-township",
+    "destination": "/middletown-township-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/middletown-township",
+    "destination": "/middletown-township-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/vineland",
+    "destination": "/vineland-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/vineland",
+    "destination": "/vineland-nj-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/new-york",
+    "destination": "/new-york-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york",
+    "destination": "/new-york-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/buffalo",
+    "destination": "/buffalo-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/buffalo",
+    "destination": "/buffalo-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/yonkers",
+    "destination": "/yonkers-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/yonkers",
+    "destination": "/yonkers-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/rochester",
+    "destination": "/rochester-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/rochester",
+    "destination": "/rochester-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/syracuse",
+    "destination": "/syracuse-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/syracuse",
+    "destination": "/syracuse-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/albany",
+    "destination": "/albany-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/albany",
+    "destination": "/albany-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/new-rochelle",
+    "destination": "/new-rochelle-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-rochelle",
+    "destination": "/new-rochelle-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/mount-vernon",
+    "destination": "/mount-vernon-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mount-vernon",
+    "destination": "/mount-vernon-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/schenectady",
+    "destination": "/schenectady-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/schenectady",
+    "destination": "/schenectady-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/utica",
+    "destination": "/utica-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utica",
+    "destination": "/utica-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/white-plains",
+    "destination": "/white-plains-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/white-plains",
+    "destination": "/white-plains-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/hempstead",
+    "destination": "/hempstead-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hempstead",
+    "destination": "/hempstead-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/troy",
+    "destination": "/troy-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/troy",
+    "destination": "/troy-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/niagara-falls",
+    "destination": "/niagara-falls-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/niagara-falls",
+    "destination": "/niagara-falls-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/binghamton",
+    "destination": "/binghamton-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/binghamton",
+    "destination": "/binghamton-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/freeport",
+    "destination": "/freeport-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/freeport",
+    "destination": "/freeport-ny-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/toronto",
+    "destination": "/toronto-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/toronto",
+    "destination": "/toronto-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/ottawa",
+    "destination": "/ottawa-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ottawa",
+    "destination": "/ottawa-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/mississauga",
+    "destination": "/mississauga-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mississauga",
+    "destination": "/mississauga-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/brampton",
+    "destination": "/brampton-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/brampton",
+    "destination": "/brampton-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/hamilton",
+    "destination": "/hamilton-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/hamilton",
+    "destination": "/hamilton-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/london",
+    "destination": "/london-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/london",
+    "destination": "/london-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/markham",
+    "destination": "/markham-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/markham",
+    "destination": "/markham-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/vaughan",
+    "destination": "/vaughan-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/vaughan",
+    "destination": "/vaughan-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/kitchener",
+    "destination": "/kitchener-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kitchener",
+    "destination": "/kitchener-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/windsor",
+    "destination": "/windsor-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/windsor",
+    "destination": "/windsor-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/oakville",
+    "destination": "/oakville-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oakville",
+    "destination": "/oakville-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/richmond-hill",
+    "destination": "/richmond-hill-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/richmond-hill",
+    "destination": "/richmond-hill-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/burlington",
+    "destination": "/burlington-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/burlington",
+    "destination": "/burlington-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/oshawa",
+    "destination": "/oshawa-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oshawa",
+    "destination": "/oshawa-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/greater-sudbury",
+    "destination": "/greater-sudbury-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/greater-sudbury",
+    "destination": "/greater-sudbury-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/barrie",
+    "destination": "/barrie-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/barrie",
+    "destination": "/barrie-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/guelph",
+    "destination": "/guelph-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/guelph",
+    "destination": "/guelph-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/whitby",
+    "destination": "/whitby-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/whitby",
+    "destination": "/whitby-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/cambridge",
+    "destination": "/cambridge-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/cambridge",
+    "destination": "/cambridge-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/st-catharines",
+    "destination": "/st-catharines-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/st-catharines",
+    "destination": "/st-catharines-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/milton",
+    "destination": "/milton-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/milton",
+    "destination": "/milton-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/kingston",
+    "destination": "/kingston-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kingston",
+    "destination": "/kingston-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/ajax",
+    "destination": "/ajax-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ajax",
+    "destination": "/ajax-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/waterloo",
+    "destination": "/waterloo-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/waterloo",
+    "destination": "/waterloo-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/thunder-bay",
+    "destination": "/thunder-bay-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/thunder-bay",
+    "destination": "/thunder-bay-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/brantford",
+    "destination": "/brantford-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/brantford",
+    "destination": "/brantford-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/chatham-kent",
+    "destination": "/chatham-kent-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/chatham-kent",
+    "destination": "/chatham-kent-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/pickering",
+    "destination": "/pickering-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pickering",
+    "destination": "/pickering-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ontario/niagara-falls",
+    "destination": "/niagara-falls-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/niagara-falls",
+    "destination": "/niagara-falls-on-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/houston",
+    "destination": "/houston-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/houston",
+    "destination": "/houston-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/san-antonio",
+    "destination": "/san-antonio-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/san-antonio",
+    "destination": "/san-antonio-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/dallas",
+    "destination": "/dallas-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/dallas",
+    "destination": "/dallas-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/austin",
+    "destination": "/austin-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/austin",
+    "destination": "/austin-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/fort-worth",
+    "destination": "/fort-worth-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/fort-worth",
+    "destination": "/fort-worth-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/el-paso",
+    "destination": "/el-paso-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/el-paso",
+    "destination": "/el-paso-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/arlington",
+    "destination": "/arlington-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arlington",
+    "destination": "/arlington-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/corpus-christi",
+    "destination": "/corpus-christi-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/corpus-christi",
+    "destination": "/corpus-christi-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/plano",
+    "destination": "/plano-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/plano",
+    "destination": "/plano-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/lubbock",
+    "destination": "/lubbock-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lubbock",
+    "destination": "/lubbock-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/irving",
+    "destination": "/irving-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/irving",
+    "destination": "/irving-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/laredo",
+    "destination": "/laredo-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/laredo",
+    "destination": "/laredo-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/garland",
+    "destination": "/garland-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/garland",
+    "destination": "/garland-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/frisco",
+    "destination": "/frisco-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/frisco",
+    "destination": "/frisco-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/amarillo",
+    "destination": "/amarillo-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/amarillo",
+    "destination": "/amarillo-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/grand-prairie",
+    "destination": "/grand-prairie-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/grand-prairie",
+    "destination": "/grand-prairie-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/mckinney",
+    "destination": "/mckinney-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mckinney",
+    "destination": "/mckinney-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/brownsville",
+    "destination": "/brownsville-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/brownsville",
+    "destination": "/brownsville-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/killeen",
+    "destination": "/killeen-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/killeen",
+    "destination": "/killeen-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/pasadena",
+    "destination": "/pasadena-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pasadena",
+    "destination": "/pasadena-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/mesquite",
+    "destination": "/mesquite-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mesquite",
+    "destination": "/mesquite-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/mcallen",
+    "destination": "/mcallen-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mcallen",
+    "destination": "/mcallen-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/denton",
+    "destination": "/denton-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/denton",
+    "destination": "/denton-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/waco",
+    "destination": "/waco-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/waco",
+    "destination": "/waco-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/carrollton",
+    "destination": "/carrollton-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/carrollton",
+    "destination": "/carrollton-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/midland",
+    "destination": "/midland-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/midland",
+    "destination": "/midland-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/abilene",
+    "destination": "/abilene-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/abilene",
+    "destination": "/abilene-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/pearland",
+    "destination": "/pearland-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pearland",
+    "destination": "/pearland-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/college-station",
+    "destination": "/college-station-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/college-station",
+    "destination": "/college-station-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/richardson",
+    "destination": "/richardson-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/richardson",
+    "destination": "/richardson-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/round-rock",
+    "destination": "/round-rock-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/round-rock",
+    "destination": "/round-rock-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/odessa",
+    "destination": "/odessa-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/odessa",
+    "destination": "/odessa-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/league-city",
+    "destination": "/league-city-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/league-city",
+    "destination": "/league-city-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/beaumont",
+    "destination": "/beaumont-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/beaumont",
+    "destination": "/beaumont-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/lewisville",
+    "destination": "/lewisville-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/lewisville",
+    "destination": "/lewisville-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/sugar-land",
+    "destination": "/sugar-land-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/sugar-land",
+    "destination": "/sugar-land-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/new-braunfels",
+    "destination": "/new-braunfels-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-braunfels",
+    "destination": "/new-braunfels-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/tyler",
+    "destination": "/tyler-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tyler",
+    "destination": "/tyler-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/allen",
+    "destination": "/allen-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/allen",
+    "destination": "/allen-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/wichita-falls",
+    "destination": "/wichita-falls-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wichita-falls",
+    "destination": "/wichita-falls-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/conroe",
+    "destination": "/conroe-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/conroe",
+    "destination": "/conroe-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/edinburg",
+    "destination": "/edinburg-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/edinburg",
+    "destination": "/edinburg-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/baytown",
+    "destination": "/baytown-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/baytown",
+    "destination": "/baytown-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/longview",
+    "destination": "/longview-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/longview",
+    "destination": "/longview-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/flower-mound",
+    "destination": "/flower-mound-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/flower-mound",
+    "destination": "/flower-mound-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/mansfield",
+    "destination": "/mansfield-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mansfield",
+    "destination": "/mansfield-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/missouri-city",
+    "destination": "/missouri-city-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri-city",
+    "destination": "/missouri-city-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/midlothian",
+    "destination": "/midlothian-tx-staffing-agency",
+    "permanent": true
+  },
+  {
+    "source": "/locations/midlothian",
+    "destination": "/midlothian-tx-staffing-agency",
+    "permanent": true
+  }
+]
