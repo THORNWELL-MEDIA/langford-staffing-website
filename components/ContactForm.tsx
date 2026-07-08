@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackLead } from "@/components/Analytics";
 
 type Variant = "employer" | "candidate" | "general";
 
@@ -25,16 +26,35 @@ const HEADINGS: Record<Variant, { title: string; sub: string }> = {
 
 export default function ContactForm({ variant = "general" }: Props) {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const headings = HEADINGS[variant];
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError(null);
+    setSending(true);
     const data = new FormData(e.currentTarget);
     const payload = Object.fromEntries(data.entries());
-    // Backend not wired. Placeholder action.
-    // eslint-disable-next-line no-console
-    console.log("[ContactForm submit]", { variant, payload });
-    setSubmitted(true);
+    // Langford endpoint reads `audience` to pick employer / candidate / general copy.
+    const audience = variant === "employer" ? "employer" : variant === "candidate" ? "candidate" : "general";
+    try {
+      const res = await fetch("https://rothenbury-contact-api.vercel.app/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ brand: "langford", audience, ...payload }),
+      });
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        throw new Error(j.error || "Something went wrong. Please try again.");
+      }
+      trackLead(`contact_form:${variant}`);
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   }
 
   if (submitted) {
@@ -55,10 +75,9 @@ export default function ContactForm({ variant = "general" }: Props) {
   return (
     <form
       onSubmit={onSubmit}
-      action="/api/contact"
-      method="post"
       className="space-y-4"
       aria-label={headings.title}
+      noValidate
     >
       <div>
         <h3 className="text-lg font-semibold text-brand-navy">
@@ -134,9 +153,18 @@ export default function ContactForm({ variant = "general" }: Props) {
         for how we handle your information.
       </p>
 
-      <button type="submit" className="btn-primary w-full sm:w-auto">
-        Send message
+      <button
+        type="submit"
+        disabled={sending}
+        className="btn-primary w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {sending ? "Sending..." : "Send message"}
       </button>
+      {error && (
+        <p role="alert" className="text-sm font-medium text-red-600">
+          {error}
+        </p>
+      )}
     </form>
   );
 }

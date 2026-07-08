@@ -1,90 +1,128 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { BRAND, NAP } from "@/lib/constants";
+import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { BRAND, NAP, HOURS } from "@/lib/constants";
 import Logo from "./Logo";
 
-const COMPANY = [
-  { href: "/services/", label: "Services" },
-  { href: "/locations/", label: "Locations" },
-  { href: "/positions/", label: "Open roles" },
+const COL_CANADA = [
+  { href: "/locations/toronto/", label: "Toronto" },
+  { href: "/locations/vancouver/", label: "Vancouver" },
+  { href: "/locations/montreal/", label: "Montreal" },
+  { href: "/locations/calgary/", label: "Calgary" }
+];
+
+const COL_UNITED_STATES = [
+  { href: "/locations/new-york/", label: "New York" },
+  { href: "/locations/boston/", label: "Boston" },
+  { href: "/locations/atlanta/", label: "Atlanta" },
+  { href: "/locations/miami/", label: "Miami" },
+  { href: "/locations/chicago/", label: "Chicago" },
+  { href: "/locations/dallas/", label: "Dallas" },
+  { href: "/locations/los-angeles/", label: "Los Angeles" },
+  { href: "/locations/phoenix/", label: "Phoenix" }
+];
+
+const COL_COMPANY = [
   { href: "/about/", label: "About" },
+  { href: "/services/", label: "Services" },
+  { href: "/careers/", label: "Careers" },
   { href: "/insights/", label: "Insights" },
   { href: "/contact/", label: "Contact" }
 ];
 
-const HIRE = [
-  { href: "/services/permanent-placement/", label: "Permanent placement" },
-  { href: "/services/temporary-staffing/", label: "Temporary staffing" },
-  { href: "/services/contract-to-hire/", label: "Contract to hire" },
-  { href: "/services/executive-search/", label: "Executive search" },
-  { href: "/services/volume-hiring/", label: "Volume hiring" },
-  { href: "/services/specialty-search/", label: "Specialty search" }
-];
-
-const LEGAL = [
-  { href: "/privacy/", label: "Privacy" },
-  { href: "/terms/", label: "Terms" }
+const COL_LEGAL = [
+  { href: "/privacy/", label: "Privacy Policy" },
+  { href: "/terms/", label: "Terms of Use" }
 ];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-line bg-white">
-      <div className="container-prose py-12">
-        <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <Logo />
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-brand-ink-soft">
+    <footer className="relative overflow-hidden bg-brand-navy-dark text-white/85">
+      {/* Saffron hairline rule top */}
+      <div className="h-px w-full bg-brand-saffron" />
+
+      <div className="container-prose py-14">
+        <div className="grid gap-12 lg:grid-cols-12">
+          {/* Brand block */}
+          <div className="lg:col-span-4">
+            <Logo variant="light" />
+            <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-saffron">
+              Staffing that fits your team · US &amp; Canada
+            </p>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
               {BRAND.shortDescription}
             </p>
-            <ul className="mt-6 space-y-3 text-sm text-brand-ink-soft">
+
+            <ul className="mt-6 space-y-3 text-sm">
               <li className="flex gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 flex-none text-brand-saffron-dark" />
-                <span>{NAP.addressDisplay}</span>
+                <MapPin className="h-4 w-4 flex-none translate-y-0.5 text-brand-saffron" />
+                <span className="text-white/80">{NAP.addressDisplay}</span>
               </li>
               <li className="flex gap-3">
-                <Phone className="mt-0.5 h-4 w-4 flex-none text-brand-saffron-dark" />
-                <a href={NAP.phoneTel} className="no-underline hover:text-brand-navy">
+                <Phone className="h-4 w-4 flex-none translate-y-0.5 text-brand-saffron" />
+                <a
+                  href={`tel:${NAP.phoneE164}`}
+                  className="tabular text-white no-underline hover:text-brand-saffron"
+                >
                   {NAP.phoneDisplay}
                 </a>
               </li>
               <li className="flex gap-3">
-                <Mail className="mt-0.5 h-4 w-4 flex-none text-brand-saffron-dark" />
+                <Mail className="h-4 w-4 flex-none translate-y-0.5 text-brand-saffron" />
                 <a
                   href={`mailto:${NAP.email}`}
-                  className="no-underline hover:text-brand-navy"
+                  className="text-white/80 no-underline hover:text-white"
                 >
                   {NAP.email}
                 </a>
               </li>
+              <li className="flex gap-3">
+                <Globe className="h-4 w-4 flex-none translate-y-0.5 text-brand-saffron" />
+                <span className="text-white/80">{HOURS.display}</span>
+              </li>
             </ul>
           </div>
 
-          <FooterCol title="Company" links={COMPANY} />
-          <FooterCol title="Hire with us" links={HIRE} />
+          <div className="grid gap-10 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-3">
+            <FooterCol title="Canada" links={COL_CANADA} />
+            <FooterCol title="United States" links={COL_UNITED_STATES} />
+            <FooterCol title="Company" links={COL_COMPANY} />
+          </div>
         </div>
 
-        <div className="mt-10 border-t border-brand-line pt-6">
-          <div className="flex flex-col gap-4 text-sm text-brand-ink-mute md:flex-row md:items-center md:justify-between">
-            <p>
-              Staffing and recruitment across the United States and Canada.
-            </p>
-            <ul className="flex flex-wrap gap-5">
-              {LEGAL.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-brand-ink-mute no-underline hover:text-brand-navy"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <p className="mt-4 text-xs leading-relaxed text-brand-ink-light">
-            © {new Date().getFullYear()} {BRAND.name}. {NAP.registeredOffice}
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-[11px] uppercase tracking-[0.16em] text-white/60 md:flex-row md:items-center md:justify-between">
+          <p>
+            © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
           </p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {COL_LEGAL.map((l) => (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className="text-white/60 no-underline hover:text-white"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <span className="inline-flex items-center gap-1.5">
+                <span className="h-1 w-1 bg-brand-saffron" />
+                US &amp; Canada
+              </span>
+            </li>
+          </ul>
         </div>
+
+        <p className="mt-6 max-w-3xl text-[11px] leading-relaxed text-white/55">
+          Langford Staffing complies with applicable federal, state, and
+          provincial employment, labor, and data-protection law in the
+          jurisdictions in which we operate. We do not discriminate against
+          candidates on the basis of any protected characteristic.
+        </p>
+
+        <p className="mt-3 max-w-3xl text-[10px] leading-relaxed text-white/40">
+          {NAP.registeredOffice}
+        </p>
       </div>
     </footer>
   );
@@ -92,35 +130,28 @@ export default function Footer() {
 
 function FooterCol({
   title,
-  links,
-  external = false
+  links
 }: {
   title: string;
-  links: { href: string; label: string }[];
-  external?: boolean;
+  links: { href?: string; label: string }[];
 }) {
   return (
-    <div className="lg:col-span-3">
-      <h3 className="text-sm font-semibold text-brand-navy">{title}</h3>
-      <ul className="mt-4 space-y-3 text-sm">
-        {links.map((item) => (
-          <li key={item.href}>
-            {external ? (
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener"
-                className="text-brand-ink-soft no-underline hover:text-brand-navy"
-              >
-                {item.label}
-              </a>
-            ) : (
+    <div>
+      <h3 className="border-b border-brand-saffron/40 pb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-saffron">
+        {title}
+      </h3>
+      <ul className="mt-5 space-y-3 text-sm">
+        {links.map((l) => (
+          <li key={l.label}>
+            {l.href ? (
               <Link
-                href={item.href}
-                className="text-brand-ink-soft no-underline hover:text-brand-navy"
+                href={l.href}
+                className="text-white/70 no-underline transition hover:text-white"
               >
-                {item.label}
+                {l.label}
               </Link>
+            ) : (
+              <span className="text-white/80">{l.label}</span>
             )}
           </li>
         ))}

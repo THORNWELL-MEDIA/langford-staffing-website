@@ -15,6 +15,7 @@ import {
   type Service
 } from "@/lib/services";
 import { CITIES } from "@/lib/cities";
+import { STATES } from "@/lib/states";
 import { BRAND, NAP } from "@/lib/constants";
 import { metaFor } from "@/lib/serviceMeta";
 import { editorial } from "@/lib/images";
@@ -140,7 +141,7 @@ export default function ServicePage({
                 Request a shortlist
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/positions/" className="btn-ghost-light">
+              <Link href="/careers/" className="btn-ghost-light">
                 See open roles
               </Link>
             </div>
@@ -324,6 +325,33 @@ export default function ServicePage({
               <div className="mt-8">
                 <Accordion items={service.faqs} />
               </div>
+            </div>
+
+            {/* Roll-up: this service across every state we cover */}
+            <div>
+              <SectionHeading
+                eyebrow="Where we staff"
+                title={`${service.shortName} in every market we serve.`}
+                description="We run this service across each state and province below. Open a state to find your city."
+              />
+              <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {STATES.map((s) => (
+                  <li key={s.slug}>
+                    <Link
+                      href={`/locations/${s.slug}/`}
+                      className="flex items-center justify-between border border-brand-line bg-white px-4 py-3 no-underline transition hover:border-brand-saffron"
+                    >
+                      <span className="font-semibold text-brand-navy">
+                        {s.name}
+                      </span>
+                      <span className="text-[11px] uppercase tracking-[0.14em] text-brand-ink-mute">
+                        {s.cities.length}{" "}
+                        {s.cities.length === 1 ? "city" : "cities"}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </article>
 

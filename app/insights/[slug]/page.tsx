@@ -278,7 +278,7 @@ export default function ArticlePage({ params }: Props) {
         title="Tell us about the role or the search."
         description="A Langford team member will respond within one business day."
         primaryCta={{ href: "/contact/", label: "Hire talent" }}
-        secondaryCta={{ href: "/positions/", label: "Find work" }}
+        secondaryCta={{ href: "/careers/", label: "Find work" }}
       />
     </>
   );

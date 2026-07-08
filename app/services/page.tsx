@@ -280,7 +280,7 @@ export default function ServicesPage() {
         title="Tell us about the role. We recommend the engagement structure."
         description="Speed, scope, fit-confidence: every search has a different optimization."
         primaryCta={{ href: "/contact/", label: "Talk to a recruiter" }}
-        secondaryCta={{ href: "/positions/", label: "See open roles" }}
+        secondaryCta={{ href: "/careers/", label: "See open roles" }}
       />
     </>
   );

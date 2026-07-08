@@ -2,86 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Hotel,
-  Truck,
-  Building2,
-  Wrench,
-  ShoppingBag,
-  HardHat,
-  Briefcase,
-  Heart,
-  type LucideIcon
-} from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { img, type ImageKey } from "@/lib/images";
+import { img } from "@/lib/images";
+import { INDUSTRIES, type Industry } from "@/lib/industries";
 
-export interface Industry {
-  name: string;
-  blurb: string;
-  icon: LucideIcon;
-  image: ImageKey;
-}
-
-export const INDUSTRIES: Industry[] = [
-  {
-    name: "Hospitality & Tourism",
-    blurb:
-      "Front-of-house, back-of-house, F&B, and management for hotels, resorts, and restaurants.",
-    icon: Hotel,
-    image: "hospitality"
-  },
-  {
-    name: "Logistics & Trade",
-    blurb:
-      "Warehouse, distribution, freight, and 3PL roles across major North American hubs.",
-    icon: Truck,
-    image: "logistics"
-  },
-  {
-    name: "Property & Facilities",
-    blurb:
-      "Building services, residential maintenance, and turnover crews across major US and Canadian metros.",
-    icon: Building2,
-    image: "property"
-  },
-  {
-    name: "Specialty Trades",
-    blurb:
-      "Licensed technicians, electricians, HVAC, and credentialed maintenance roles.",
-    icon: Wrench,
-    image: "trades"
-  },
-  {
-    name: "Retail & Consumer",
-    blurb:
-      "Store leadership, sales associates, and seasonal coverage for retail operators.",
-    icon: ShoppingBag,
-    image: "retail"
-  },
-  {
-    name: "Construction",
-    blurb:
-      "Skilled and unskilled labor, foremen, and project coordinators for active sites.",
-    icon: HardHat,
-    image: "construction"
-  },
-  {
-    name: "Professional Services",
-    blurb:
-      "Finance, accounting, marketing, and operations roles for MNCs, HQs, and growth companies.",
-    icon: Briefcase,
-    image: "professional"
-  },
-  {
-    name: "Healthcare",
-    blurb:
-      "Clinical and administrative roles for hospitals, clinics, and homecare networks.",
-    icon: Heart,
-    image: "healthcare"
-  }
-];
+// Re-export so existing import paths keep working without churn.
+export { INDUSTRIES };
+export type { Industry };
 
 export default function IndustriesGrid() {
   return (
@@ -101,7 +29,7 @@ function Card({ ind, idx }: { ind: Industry; idx: number }) {
   return (
     <motion.a
       ref={ref}
-      href="/positions/"
+      href="/careers/"
       initial={{ opacity: 0, y: 18 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 18 }}
       transition={{ duration: 0.45, delay: (idx % 4) * 0.06, ease: "easeOut" }}

@@ -7,7 +7,8 @@ import {
   Coffee,
   MessageSquare,
   Award,
-  CheckCircle2
+  CheckCircle2,
+  Users
 } from "lucide-react";
 import { BRAND, NAP } from "@/lib/constants";
 import { editorial } from "@/lib/images";
@@ -16,6 +17,9 @@ import SectionHeading from "@/components/SectionHeading";
 import SchemaJsonLd from "@/components/SchemaJsonLd";
 import { breadcrumbSchema, organizationSchema } from "@/lib/schema";
 import JobBoard from "./JobBoard";
+import { CareersFilterProvider } from "./careers-filter-context";
+import JobFilterControls from "./job-filter-controls";
+import { fetchRolesFromApi } from "@/lib/data/careers";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -52,16 +56,11 @@ const HIRING_STEPS = [
   }
 ];
 
-const INTERNAL_OPENINGS = [
-  { title: "Senior Recruiter, Hospitality", city: "Toronto, ON", type: "Full-time" },
-  { title: "Account Manager, Multifamily", city: "Mississauga, ON", type: "Full-time" },
-  { title: "Bilingual Recruiter (EN/FR)", city: "Montreal, QC", type: "Full-time" },
-  { title: "Operations Coordinator", city: "Calgary, AB", type: "Full-time" }
-];
+export default async function CareersPage() {
+  const allRoles = await fetchRolesFromApi();
 
-export default function CareersPage() {
   return (
-    <>
+    <CareersFilterProvider allRoles={allRoles}>
       <SchemaJsonLd
         data={[
           organizationSchema(),
@@ -87,8 +86,6 @@ export default function CareersPage() {
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/15 pb-6">
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] font-semibold uppercase tracking-[0.20em]">
               <span className="text-brand-saffron">Careers</span>
-              <span className="h-3 w-px bg-white/25" />
-              <span className="text-white/80">Internal openings</span>
             </div>
           </div>
 
@@ -106,25 +103,20 @@ export default function CareersPage() {
                 doing this work the right way, we want to talk.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/contact/" className="btn-saffron">
-                  Submit your résumé
+                <Link href="#positions" className="btn-saffron">
+                  See all positions
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link href="/positions/" className="btn-ghost-light">
-                  Roles for clients
-                </Link>
               </div>
-              <p className="mt-6 text-[11px] uppercase tracking-[0.18em] text-white/65">
-                This page is for working{" "}
-                <em className="not-italic text-brand-saffron">at</em> {BRAND.name}.{" "}
-                <Link href="/positions/" className="text-brand-saffron underline">
-                  Open positions for clients
-                </Link>
-              </p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Inter-page filter */}
+      <div className="container-prose mt-12 mb-12">
+        <JobFilterControls scrollToId="positions" />
+      </div>
 
       {/* === EDITORIAL SLAB === */}
       <section className="bg-brand-paper">
@@ -173,23 +165,23 @@ export default function CareersPage() {
 
           <aside className="lg:col-span-5">
             <div className="border border-brand-line bg-brand-navy p-7 text-white">
-              <p className="inline-flex border-b border-brand-saffron pb-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-saffron">
-                General application
-              </p>
+              <Users className="h-5 w-5 text-brand-saffron" strokeWidth={1.75} />
               <h3 className="mt-4 font-display text-[20px] font-semibold">
-                No specific role open?
+                Why candidates work with us
               </h3>
-              <p className="mt-3 text-sm text-white/80">
-                We accept general applications. We keep your information on file
-                and reach out when a fitting role opens.
-              </p>
-              <Link
-                href="/contact/"
-                className="btn-saffron mt-6 w-full justify-center"
-              >
-                Submit your résumé
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              <ul className="mt-4 space-y-3 text-sm text-white/85">
+                {[
+                  "Structured interviews, never guess what comes next.",
+                  "Compensation, schedule, and scope clarity up front.",
+                  "Continued access to roles if the first fit is not right.",
+                  "Bilingual EN/FR support across Quebec and Ottawa."
+                ].map((p) => (
+                  <li key={p} className="flex gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 flex-none translate-y-0.5 text-brand-saffron" />
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>
@@ -217,39 +209,6 @@ export default function CareersPage() {
               </li>
             ))}
           </ul>
-
-          <div className="mx-auto mt-12 grid max-w-5xl gap-3 sm:grid-cols-2">
-            {INTERNAL_OPENINGS.map((r, i) => (
-              <div
-                key={r.title}
-                className="border border-brand-line bg-white p-5"
-              >
-                <div className="flex items-baseline gap-3">
-                  <span
-                    className="font-display text-[20px] font-semibold leading-none text-brand-navy/30 tabular-nums"
-                    style={{ fontFeatureSettings: "'tnum' on, 'lnum' on" }}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-saffron-dark">
-                    Internal opening
-                  </p>
-                </div>
-                <h3 className="mt-2 font-display text-[18px] font-semibold text-brand-navy">
-                  {r.title}
-                </h3>
-                <p className="mt-2 text-[11px] uppercase tracking-[0.16em] text-brand-ink-mute">
-                  {r.city} · {r.type}
-                </p>
-                <Link
-                  href="/contact/"
-                  className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-navy no-underline transition hover:text-brand-saffron-dark"
-                >
-                  Apply for this role <ArrowRight className="h-3 w-3" />
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -296,9 +255,9 @@ export default function CareersPage() {
         eyebrow="Build a career here"
         title="Hire other people for a living. Build a career while you do."
         description="Tell us about you. We tell you what we have open."
-        primaryCta={{ href: "/contact/", label: "Submit your résumé" }}
+        primaryCta={{ href: "#positions", label: "See all positions" }}
         secondaryCta={{ href: "/about/", label: "About Langford" }}
       />
-    </>
+    </CareersFilterProvider>
   );
 }

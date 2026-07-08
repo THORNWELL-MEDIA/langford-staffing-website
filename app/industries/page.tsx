@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { INDUSTRIES } from "@/components/IndustriesGrid";
+import { INDUSTRIES } from "@/lib/industries";
 import { BRAND, NAP, CTA } from "@/lib/constants";
 import CTASection from "@/components/CTASection";
 import SchemaJsonLd from "@/components/SchemaJsonLd";

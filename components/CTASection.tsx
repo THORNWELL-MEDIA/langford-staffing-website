@@ -15,7 +15,7 @@ export default function CTASection({
   title,
   description,
   primaryCta = { href: "/contact/", label: "Talk to a recruiter" },
-  secondaryCta = { href: "/positions/", label: "See open roles" },
+  secondaryCta = { href: "/careers/", label: "See open roles" },
   variant = "navy"
 }: Props) {
   if (variant === "light") {

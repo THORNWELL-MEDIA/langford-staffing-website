@@ -181,28 +181,34 @@ export default function FindLocalRecruiter({
     const g = googleRef.current;
     if (!g?.maps) return;
 
-    if (!overviewMapRef.current) {
-      overviewMapRef.current = new g.maps.Map(overviewDivRef.current, {
-        center: { lat: 46, lng: -96 },
-        zoom: 3,
-        styles: LANGFORD_MAP_STYLES,
-        disableDefaultUI: true,
-        gestureHandling: "cooperative",
-        backgroundColor: "#FAF6EE",
-        clickableIcons: false
-      });
-    }
+    // Map construction can throw at runtime if the API key is not authorized
+    // for this domain. Never let that crash the page; fall back gracefully.
+    try {
+      if (!overviewMapRef.current) {
+        overviewMapRef.current = new g.maps.Map(overviewDivRef.current, {
+          center: { lat: 46, lng: -96 },
+          zoom: 3,
+          styles: LANGFORD_MAP_STYLES,
+          disableDefaultUI: true,
+          gestureHandling: "cooperative",
+          backgroundColor: "#FAF6EE",
+          clickableIcons: false
+        });
+      }
 
-    overviewMarkersRef.current.forEach((m) => m.setMap(null));
-    overviewMarkersRef.current = COVERAGE_PINS.map(
-      (p) =>
-        new g.maps.Marker({
-          position: { lat: p.lat, lng: p.lng },
-          map: overviewMapRef.current,
-          icon: saffronMarkerIcon(g),
-          title: `${p.name} recruiter desk`
-        })
-    );
+      overviewMarkersRef.current.forEach((m) => m.setMap(null));
+      overviewMarkersRef.current = COVERAGE_PINS.map(
+        (p) =>
+          new g.maps.Marker({
+            position: { lat: p.lat, lng: p.lng },
+            map: overviewMapRef.current,
+            icon: saffronMarkerIcon(g),
+            title: `${p.name} recruiter desk`
+          })
+      );
+    } catch {
+      setMapsLoadError("load-failed");
+    }
   }, [mapsReady, mapVisible]);
 
   // Build / update the live Google Map once we have a location to show.
@@ -211,6 +217,7 @@ export default function FindLocalRecruiter({
     const g = googleRef.current;
     if (!g || !mapDivRef.current) return;
 
+    try {
     if (!mapRef.current) {
       mapRef.current = new g.maps.Map(mapDivRef.current, {
         center: location,
@@ -246,6 +253,11 @@ export default function FindLocalRecruiter({
       center: location,
       radius: 25000 // 25km coverage halo around the address
     });
+    } catch {
+      // Maps failed at runtime (e.g. key not authorized for this domain).
+      // Routing still works; the map just stays hidden.
+      setMapsLoadError("load-failed");
+    }
   }
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -577,7 +589,7 @@ export default function FindLocalRecruiter({
                         <span className="font-semibold">
                           {routedTo.name} from our {routedTo.market} desk
                         </span>{" "}
-                        will reach out within one business day. Same person from intake through onboarding.{" "}
+                        will reach out within one business day.{" "}
                         <Link
                           href="/contact/"
                           className="font-semibold underline-offset-4 hover:underline"
@@ -609,7 +621,9 @@ export default function FindLocalRecruiter({
                       : "mt-4 text-xs text-brand-ink-mute"
                   }
                 >
-                  Map preview is loading. Recruiter routing works either way.
+                  We have recruiter desks across the United States and Canada.
+                  Drop your city or postal code and we will route you to the
+                  closest one.
                 </p>
               )}
               {mapsLoadError === "load-failed" && (
@@ -627,8 +641,9 @@ export default function FindLocalRecruiter({
 
               {/* Always-on North American coverage map. Real Google Map,
                   not a decorative SVG. Hidden once a search result map is
-                  rendered above. */}
-              {!mapVisible && (
+                  rendered above, and hidden entirely if Maps cannot load so
+                  we never show an empty gray box. */}
+              {!mapVisible && !mapsLoadError && (
                 <div className="mt-6">
                   <div
                     ref={overviewDivRef}

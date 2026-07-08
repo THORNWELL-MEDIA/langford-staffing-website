@@ -28,8 +28,7 @@ const STEPS: Step[] = [
     n: "02",
     title: "We map the job",
     body: "We translate what you actually need into a one-page brief. The real decisions the role owns, the common ways it can fail, and what good looks like at 90 days.",
-    icon: Target,
-    emphasis: true
+    icon: Target
   },
   {
     n: "03",

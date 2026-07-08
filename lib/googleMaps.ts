@@ -51,12 +51,19 @@ export function loadGoogleMaps(apiKey: string): Promise<any> {
     script.id = SCRIPT_ID;
     script.async = true;
     script.defer = true;
+    // Classic loading (no loading=async): google.maps.Map is fully available
+    // on script load, so `new google.maps.Map()` works directly. With
+    // loading=async the library is lazy and must be awaited via importLibrary,
+    // which is what caused "google.maps.Map is not a constructor".
     script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(
       apiKey
-    )}&libraries=places&loading=async&v=weekly`;
+    )}&libraries=places`;
     script.onload = () => {
-      if (window.google) resolve(window.google);
-      else reject(new Error("Google Maps loaded but window.google is missing."));
+      if (window.google && window.google.maps && window.google.maps.Map) {
+        resolve(window.google);
+      } else {
+        reject(new Error("Google Maps loaded but maps API is missing."));
+      }
     };
     script.onerror = () =>
       reject(new Error("Failed to load Google Maps script."));

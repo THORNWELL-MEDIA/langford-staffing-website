@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import { CITIES } from "@/lib/cities";
+import { STATES, statesByCountry } from "@/lib/states";
 import { BRAND, NAP } from "@/lib/constants";
 import { editorial } from "@/lib/images";
 import CTASection from "@/components/CTASection";
@@ -39,6 +40,10 @@ const CITY_PHOTO: Record<string, string> = {
 };
 
 export default function LocationsIndex() {
+  const totalCities = STATES.reduce((n, s) => n + s.cities.length, 0);
+  const usStates = statesByCountry("United States");
+  const caStates = statesByCountry("Canada");
+
   return (
     <>
       <SchemaJsonLd
@@ -67,7 +72,7 @@ export default function LocationsIndex() {
               <span className="text-white/80">Where we hire</span>
             </div>
             <div className="text-[10px] font-semibold uppercase tracking-[0.20em] text-white/70 tabular-nums">
-              {String(CITIES.length).padStart(2, "0")} cities
+              {totalCities} cities · {STATES.length} states
             </div>
           </div>
 
@@ -80,9 +85,9 @@ export default function LocationsIndex() {
                 </em>
               </h1>
               <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-white/85">
-                {CITIES.length} cities across the United States and Canada.
-                From the GTA to the southwestern Sun Belt, local market
-                knowledge in every market we serve.
+                {totalCities} cities across {STATES.length} states and provinces
+                in the United States and Canada. Pick your state below, or jump
+                straight to a city.
               </p>
             </div>
           </div>
@@ -116,6 +121,51 @@ export default function LocationsIndex() {
         title="Find a local recruiter"
         description="Drop in a city or postal code, and we will route you to the recruiter who covers your area."
       />
+
+      {/* Browse by state / province */}
+      <section className="section bg-white">
+        <div className="container-prose">
+          <SectionHeading
+            eyebrow="Browse by state"
+            title="Find staffing where you operate."
+            description="Every state and province we cover, with a page for each city beneath it."
+            size="lg"
+          />
+          {[
+            { label: "United States", states: usStates },
+            { label: "Canada", states: caStates }
+          ]
+            .filter((group) => group.states.length > 0)
+            .map((group) => (
+              <div key={group.label} className="mt-10">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-saffron-dark">
+                  {group.label}
+                </p>
+                <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.states.map((s) => (
+                    <li key={s.slug}>
+                      <Link
+                        href={`/locations/${s.slug}/`}
+                        className="flex items-center justify-between border border-brand-line bg-white px-4 py-3.5 no-underline transition hover:border-brand-saffron"
+                      >
+                        <span className="flex items-center gap-2.5">
+                          <MapPin className="h-4 w-4 flex-none text-brand-saffron-dark" />
+                          <span className="font-semibold text-brand-navy">
+                            {s.name}
+                          </span>
+                        </span>
+                        <span className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink-mute">
+                          {s.cities.length}{" "}
+                          {s.cities.length === 1 ? "city" : "cities"}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </div>
+      </section>
 
       {/* City editorial slabs */}
       <section className="section">
@@ -225,7 +275,7 @@ export default function LocationsIndex() {
         title="We have already met candidates there."
         description="Local market knowledge, regional coverage, structured engagements."
         primaryCta={{ href: "/contact/", label: "Hire talent" }}
-        secondaryCta={{ href: "/positions/", label: "Find work" }}
+        secondaryCta={{ href: "/careers/", label: "Find work" }}
       />
     </>
   );

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Inter, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SchemaJsonLd from "@/components/SchemaJsonLd";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import Analytics from "@/components/Analytics";
 import {
   organizationSchema,
   localBusinessSchema,
-  websiteSchema
+  websiteSchema,
+  siteNavigationSchema
 } from "@/lib/schema";
 import { BRAND, NAP } from "@/lib/constants";
 
@@ -71,20 +72,19 @@ export const metadata: Metadata = {
   }
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children
 }: {
   children: React.ReactNode;
 }) {
-  const h = await headers();
-  const isPreview = (h.get("host") || "").endsWith(".vercel.app");
+  const isPreview = process.env.VERCEL_ENV === "preview";
   return (
     <html lang="en" className={`${inter.variable} ${plexSerif.variable} ${plexMono.variable}`}>
       <head>
         {isPreview && <meta name="robots" content="noindex, nofollow" />}
         <SchemaJsonLd
           id="ld-org"
-          data={[organizationSchema(), websiteSchema(), localBusinessSchema()]}
+          data={[organizationSchema(), websiteSchema(), siteNavigationSchema(), localBusinessSchema()]}
         />
         {/* Google Tag Manager */}
         <script
@@ -124,6 +124,7 @@ export default async function RootLayout({
         </main>
         <Footer />
         <StickyMobileCTA />
+        <Analytics />
       </body>
     </html>
   );

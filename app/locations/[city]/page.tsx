@@ -10,7 +10,7 @@ import {
   Building2
 } from "lucide-react";
 import { CITIES, getCity, citySlugs, type City } from "@/lib/cities";
-import { SILO_INDUSTRIES, getSiloCity } from "@/lib/silo-data";
+import { getState, stateSlugs } from "@/lib/states";
 import { getService, type Service } from "@/lib/services";
 import { BRAND, NAP } from "@/lib/constants";
 import { editorial } from "@/lib/images";
@@ -18,10 +18,14 @@ import { metaFor } from "@/lib/serviceMeta";
 import CTASection from "@/components/CTASection";
 import SectionHeading from "@/components/SectionHeading";
 import SchemaJsonLd from "@/components/SchemaJsonLd";
+import StateHub from "@/components/StateHub";
 import { breadcrumbSchema, localBusinessSchema } from "@/lib/schema";
 
+// This single dynamic segment serves BOTH state hubs (e.g. /locations/texas/)
+// and the curated city pages (e.g. /locations/toronto/). State slugs and city
+// slugs never collide, so we resolve state-first, then city.
 export function generateStaticParams() {
-  return citySlugs();
+  return [...stateSlugs(), ...citySlugs()];
 }
 
 export function generateMetadata({
@@ -29,8 +33,15 @@ export function generateMetadata({
 }: {
   params: { city: string };
 }): Metadata {
+  const state = getState(params.city);
+  if (state) {
+    return {
+      title: `Staffing Agencies in ${state.name}`,
+      description: `${BRAND.name} staffs employers across ${state.cities.length} cities in ${state.name}. Find your local staffing page or tell us what you need to hire.`
+    };
+  }
   const city = getCity(params.city);
-  if (!city) return { title: "City Not Found" };
+  if (!city) return { title: "Not Found" };
   return {
     title: `Staffing & Recruitment in ${city.name}`,
     description: `${BRAND.name} places candidates and supports employers across ${city.name}, ${city.province}. Permanent, temporary, and contract roles with local expertise.`
@@ -63,6 +74,9 @@ export default function CityPage({
 }: {
   params: { city: string };
 }) {
+  const state = getState(params.city);
+  if (state) return <StateHub state={state} />;
+
   const city = getCity(params.city);
   if (!city) notFound();
 
@@ -144,7 +158,7 @@ export default function CityPage({
                 Hire in {city.name}
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/positions/" className="btn-ghost-light">
+              <Link href="/careers/" className="btn-ghost-light">
                 See open roles
               </Link>
             </div>
@@ -206,7 +220,7 @@ export default function CityPage({
                   {city.candidateNotes}
                 </p>
                 <Link
-                  href="/positions/"
+                  href="/careers/"
                   className="link-arrow mt-6"
                 >
                   See open roles in {city.name}{" "}
@@ -232,33 +246,6 @@ export default function CityPage({
                 </Link>
               </div>
             </div>
-
-            {/* Silo industry drill-downs (only shown when this city has a silo profile) */}
-            {getSiloCity(city.slug) && (
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-saffron-dark">
-                  Industries we staff in {city.name}
-                </p>
-                <h2 className="mt-3 font-display text-[24px] font-semibold text-brand-navy">
-                  Drill into your industry desk.
-                </h2>
-                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {SILO_INDUSTRIES.map((si) => (
-                    <li key={si.slug}>
-                      <Link
-                        href={`/locations/${city.slug}/${si.slug}/`}
-                        className="flex items-center justify-between border border-brand-line bg-white px-4 py-3 text-sm font-semibold text-brand-navy no-underline transition hover:border-brand-saffron hover:text-brand-saffron-dark"
-                      >
-                        <span>
-                          {si.name} in {city.name}
-                        </span>
-                        <ArrowRight className="h-4 w-4 text-brand-ink-mute" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
 
             {/* Editorial pull-quote slab */}
             <div className="border-l-[3px] border-brand-saffron bg-brand-paper-warm/50 p-7 sm:p-8">

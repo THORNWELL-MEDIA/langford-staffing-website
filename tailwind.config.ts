@@ -38,7 +38,7 @@ const config: Config = {
           ink: "#0A1A35",
           "ink-soft": "#1F2937",
           "ink-mute": "#4B5563",
-          "ink-light": "#94A3B8",
+          "ink-light": "#475569",
           slate: "#4B5563",
 
           // Surface tones
@@ -88,6 +88,13 @@ const config: Config = {
           "Helvetica Neue",
           "Arial",
           "sans-serif"
+        ],
+        serif: [
+          "var(--font-plex-serif)",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "serif"
         ],
         mono: [
           "var(--font-plex-mono)",

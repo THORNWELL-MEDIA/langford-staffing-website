@@ -286,7 +286,7 @@ export default function IndustriesTabs() {
               {current.detail}
             </p>
             <Link
-              href="/positions/"
+              href="/careers/"
               className="link-arrow mt-7"
             >
               See open {current.shortName.toLowerCase()} roles

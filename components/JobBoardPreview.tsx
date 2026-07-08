@@ -151,7 +151,7 @@ export default function JobBoardPreview({ showSeeAll = true }: Props) {
         {showSeeAll && (
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link
-              href="/positions/#general-application"
+              href="/contact/"
               className="inline-flex items-center gap-1.5 rounded-full bg-brand-navy px-6 py-3 text-sm font-semibold text-white no-underline transition hover:-translate-y-0.5 hover:bg-brand-navy-dark"
             >
               Submit your résumé
@@ -222,7 +222,7 @@ function RoleCard({ role, idx }: { role: OpenRole; idx: number }) {
         </li>
       </ul>
       <Link
-        href="/positions/#general-application"
+        href="/contact/"
         className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-sky-dark no-underline transition group-hover:text-brand-saffron-dark"
       >
         Apply now
