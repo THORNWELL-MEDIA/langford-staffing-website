@@ -26,10 +26,13 @@ const kebab = (s: string) =>
     .replace(/^-+|-+$/g, "");
 
 // The silo data has an inconsistent country field ("USA" vs "United States").
-// Normalize on the only Canadian province present (Ontario) and treat the rest
-// as United States.
+// Classify by Canadian province code so every province (not just Ontario) is
+// recognized as Canada.
+const CA_PROVINCES = new Set([
+  "ON", "QC", "BC", "AB", "MB", "SK", "NS", "NB", "NL", "PE", "NT", "YT", "NU",
+]);
 const normalizeCountry = (p: SiloPage): "United States" | "Canada" =>
-  (p.country || "").toLowerCase().startsWith("can") || p.state_abbr === "ON"
+  (p.country || "").toLowerCase().startsWith("can") || CA_PROVINCES.has(p.state_abbr)
     ? "Canada"
     : "United States";
 
