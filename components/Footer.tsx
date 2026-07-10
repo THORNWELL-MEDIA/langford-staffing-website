@@ -1,25 +1,20 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
 import { BRAND, NAP, HOURS } from "@/lib/constants";
+import { statesByCountry } from "@/lib/states";
 import Logo from "./Logo";
 
-const COL_CANADA = [
-  { href: "/locations/toronto/", label: "Toronto" },
-  { href: "/locations/vancouver/", label: "Vancouver" },
-  { href: "/locations/montreal/", label: "Montreal" },
-  { href: "/locations/calgary/", label: "Calgary" }
-];
+// Provinces + states, derived from the silo so the footer always matches
+// coverage (Canada: all provinces; US: all states) instead of hand-listed cities.
+const COL_CANADA = statesByCountry("Canada").map((s) => ({
+  href: `/locations/${s.slug}/`,
+  label: s.name,
+}));
 
-const COL_UNITED_STATES = [
-  { href: "/locations/new-york/", label: "New York" },
-  { href: "/locations/boston/", label: "Boston" },
-  { href: "/locations/atlanta/", label: "Atlanta" },
-  { href: "/locations/miami/", label: "Miami" },
-  { href: "/locations/chicago/", label: "Chicago" },
-  { href: "/locations/dallas/", label: "Dallas" },
-  { href: "/locations/los-angeles/", label: "Los Angeles" },
-  { href: "/locations/phoenix/", label: "Phoenix" }
-];
+const COL_UNITED_STATES = statesByCountry("United States").map((s) => ({
+  href: `/locations/${s.slug}/`,
+  label: s.name,
+}));
 
 const COL_COMPANY = [
   { href: "/about/", label: "About" },
