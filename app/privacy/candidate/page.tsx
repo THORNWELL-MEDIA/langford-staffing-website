@@ -43,6 +43,7 @@ export default function Page() {
             <p>Last updated July 9, 2026</p>
           </div>
           <p>Langford Staffing uses candidate information to conduct a fair, secure and effective recruitment process; technology may help transcribe, organize and analyze job-related answers, but qualified human personnel remain responsible for meaningful review and employment decisions.</p>
+
           <h2>Candidate Privacy at a Glance</h2>
           <p>You will be told before an interview is recorded or materially analyzed using artificial intelligence.</p>
           <p>Recorded answers may be transcribed, summarized and organized to help authorized recruiters and hiring managers review job-related information.</p>
