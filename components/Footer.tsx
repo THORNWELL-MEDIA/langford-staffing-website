@@ -25,8 +25,12 @@ const COL_COMPANY = [
 ];
 
 const COL_LEGAL = [
-  { href: "/privacy/", label: "Privacy Policy" },
-  { href: "/terms/", label: "Terms of Use" }
+  { href: "/privacy/", label: "Privacy & Trust Centre" },
+  { href: "/privacy/general", label: "General Privacy Policy" },
+  { href: "/privacy/candidate", label: "Candidate Privacy Policy" },
+  { href: "/privacy/cookies", label: "Cookie Policy" },
+  { href: "/privacy/accessibility", label: "Accessibility Statement" },
+  { href: "/privacy/terms", label: "Website Terms of Use" }
 ];
 
 export default function Footer() {
@@ -84,8 +88,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-[11px] uppercase tracking-[0.16em] text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>
+        <div className="mt-12 flex flex-col gap-8 border-t border-white/10 pt-8 text-[11px] uppercase tracking-[0.16em] text-white/60 md:flex-row md:items-center md:justify-between">
+          <p className="whitespace-nowrap shrink-0">
             © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
@@ -99,12 +103,6 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-            <li>
-              <span className="inline-flex items-center gap-1.5">
-                <span className="h-1 w-1 bg-brand-saffron" />
-                US &amp; Canada
-              </span>
-            </li>
           </ul>
         </div>
 

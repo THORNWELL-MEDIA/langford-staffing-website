@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SchemaJsonLd from "@/components/SchemaJsonLd";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Analytics from "@/components/Analytics";
+import CookieBanner from "@/components/CookieBanner";
 import {
   organizationSchema,
   localBusinessSchema,
@@ -125,6 +126,7 @@ export default function RootLayout({
         <Footer />
         <StickyMobileCTA />
         <Analytics />
+        <CookieBanner />
       </body>
     </html>
   );
