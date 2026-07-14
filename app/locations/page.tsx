@@ -117,10 +117,10 @@ export default function LocationsIndex() {
         </div>
       </section>
 
-      <FindLocalRecruiter
+      {/* <FindLocalRecruiter
         title="Find a local recruiter"
         description="Drop in a city or postal code, and we will route you to the recruiter who covers your area."
-      />
+      /> */}
 
       {/* Browse by state / province */}
       <section className="section bg-white">
