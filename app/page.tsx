@@ -183,7 +183,7 @@ export default function HomePage() {
           {/* Briefing stats row — tabular, dignified */}
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-white/15 pt-10 sm:grid-cols-4">
             <BriefingStat value="6" label="Engagement types" />
-            <BriefingStat value="18" suffix="+" label="Cities covered" />
+            <BriefingStat value="100" suffix="+" label="Cities covered" />
             <BriefingStat value="10" suffix="+" label="Industries served" />
             <BriefingStat value="US · CA" label="Operating coverage" isText />
           </div>
@@ -193,10 +193,10 @@ export default function HomePage() {
       <TrustMarquee />
 
       {/* === FIND A LOCAL RECRUITER === */}
-      <FindLocalRecruiter
+      {/* <FindLocalRecruiter
         title="Find your local recruiter"
         description="Drop your city or postal code. A named Langford recruiter from the closest desk responds within one business day. Same person from intake through onboarding."
-      />
+      /> */}
 
       {/* === PROBLEMS WE SOLVE === */}
       <ProblemsWeSolve
@@ -389,7 +389,7 @@ function BriefingStat({
         className={
           "tabular leading-none tracking-tight text-white " +
           (isText
-            ? "text-[28px] font-semibold sm:text-[32px]"
+            ? "text-[40px] font-semibold sm:text-[48px]"
             : "text-[40px] font-semibold sm:text-[48px]")
         }
       >
