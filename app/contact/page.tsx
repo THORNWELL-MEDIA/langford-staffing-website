@@ -144,11 +144,11 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <FindLocalRecruiter
+      {/* <FindLocalRecruiter
         variant="dark"
         title="Find a local recruiter"
         description="Quickest path to a recruiter who knows your market. Drop your city or postal code below."
-      />
+      /> */}
 
       {/* Hours + map */}
       <section className="bg-brand-paper-warm/40 section-tight">
