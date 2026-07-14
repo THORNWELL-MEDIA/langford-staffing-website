@@ -28,7 +28,6 @@ export default function ContactPage() {
           ])
         ]}
       />
-
       {/* Hero — executive briefing band */}
       <section className="relative isolate overflow-hidden bg-brand-navy text-white">
         <div
@@ -122,7 +121,7 @@ export default function ContactPage() {
       {/* Forms */}
       <section className="section-tight">
         <div className="container-prose">
-          <div className="grid gap-10 lg:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-1">
             <FormCard
               icon={Briefcase}
               eyebrow="For employers"
@@ -132,7 +131,7 @@ export default function ContactPage() {
               <ContactForm variant="employer" />
             </FormCard>
 
-            <FormCard
+            {/* <FormCard
               icon={UserSearch}
               eyebrow="For candidates"
               title="Apply with Langford"
@@ -140,16 +139,16 @@ export default function ContactPage() {
               accent
             >
               <ContactForm variant="candidate" />
-            </FormCard>
+            </FormCard> */}
           </div>
         </div>
       </section>
 
-      <FindLocalRecruiter
+      {/* <FindLocalRecruiter
         variant="dark"
         title="Find a local recruiter"
         description="Quickest path to a recruiter who knows your market. Drop your city or postal code below."
-      />
+      /> */}
 
       {/* Hours + map */}
       <section className="bg-brand-paper-warm/40 section-tight">
@@ -163,9 +162,7 @@ export default function ContactPage() {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-brand-ink">
               Our team operates across the United States and Canada during
-              standard North American business hours. For urgent matters
-              outside hours, please use email and we will reply on the next
-              business day.
+              standard North American business hours Eastern Standard Time.
             </p>
 
             <ul className="mt-8 grid grid-cols-2 gap-2 text-sm">
@@ -277,22 +274,19 @@ function FormCard({
   return (
     <div className="overflow-hidden border border-brand-line bg-white">
       <div
-        className={`flex items-center gap-4 px-7 py-5 ${
-          accent ? "bg-brand-saffron text-brand-navy" : "bg-brand-navy text-white"
-        }`}
+        className={`flex items-center gap-4 px-7 py-5 ${accent ? "bg-brand-saffron text-brand-navy" : "bg-brand-navy text-white"
+          }`}
       >
         <div
-          className={`flex h-10 w-10 items-center justify-center border ${
-            accent ? "border-brand-navy/30" : "border-white/30"
-          }`}
+          className={`flex h-10 w-10 items-center justify-center border ${accent ? "border-brand-navy/30" : "border-white/30"
+            }`}
         >
           <Icon className="h-4 w-4" strokeWidth={1.75} />
         </div>
         <div>
           <p
-            className={`text-[10px] font-semibold uppercase tracking-[0.22em] ${
-              accent ? "text-brand-navy/80" : "text-white/80"
-            }`}
+            className={`text-[10px] font-semibold uppercase tracking-[0.22em] ${accent ? "text-brand-navy/80" : "text-white/80"
+              }`}
           >
             {eyebrow}
           </p>

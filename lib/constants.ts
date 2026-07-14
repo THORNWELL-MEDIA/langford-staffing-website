@@ -44,7 +44,7 @@ export const NAP = {
   phoneDisplay: "1-866-888-6111",
   phoneE164: "+18668886111",
   phoneTel: "tel:+18668886111",
-  email: "hello@langfordstaffing.com",
+  email: "careers@langfordstaffing.com",
   domain: "langfordstaffing.com",
   websiteUrl: "https://www.langfordstaffing.com",
   // Fine-print only. Footer micro-copy. Never in operating positioning.
@@ -54,14 +54,14 @@ export const NAP = {
 
 export const HOURS = {
   // Operating hours align with North American business windows.
-  monday: "8:00 - 18:00 ET",
-  tuesday: "8:00 - 18:00 ET",
-  wednesday: "8:00 - 18:00 ET",
-  thursday: "8:00 - 18:00 ET",
-  friday: "8:00 - 18:00 ET",
+  monday: "9:00 AM - 5:00 PM",
+  tuesday: "9:00 AM - 5:00 PM",
+  wednesday: "9:00 AM - 5:00 PM",
+  thursday: "9:00 AM - 5:00 PM",
+  friday: "9:00 AM - 5:00 PM",
   saturday: "Closed",
   sunday: "Closed",
-  display: "Mon-Fri 8:00 - 18:00 ET (US/Canada)"
+  display: "Mon-Fri 9:00 AM - 5:00 PM EST (US/Canada)"
 } as const;
 
 export const SOCIAL = {
