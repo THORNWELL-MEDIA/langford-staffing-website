@@ -28,7 +28,6 @@ export default function ContactPage() {
           ])
         ]}
       />
-
       {/* Hero — executive briefing band */}
       <section className="relative isolate overflow-hidden bg-brand-navy text-white">
         <div
