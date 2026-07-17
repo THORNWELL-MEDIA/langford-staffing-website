@@ -501,7 +501,7 @@ export default function Page() {
           <h2>NO SALE OF CANDIDATE INFORMATION</h2>
           <p>Langford Staffing does not sell candidate personal information. We do not authorize candidate records to be used for unrelated third-party advertising.</p>
           <h2>25. Recruitment Technology Providers</h2>
-          <p>Langford Staffing uses third-party technology and service providers to operate parts of recruitment. The provider may host information, process video or audio, generate a transcript, assist with analysis, send communications, manage an application, perform an assessment or support security.</p>
+          <p>Langford Staffing currently uses Hireflix, S.L. to administer and host recorded candidate interviews. Hireflix processes candidate video and audio responses, interview-related information and technical data solely to provide the interview platform and make completed interviews available to authorized Langford Staffing personnel and, where applicable, the relevant hiring organization.</p>
           <h2>We seek to require appropriate provider terms addressing:</h2>
           <ul>
             <li>processing only for documented recruitment and service-delivery purposes;</li>
