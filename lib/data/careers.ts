@@ -146,19 +146,35 @@ export async function fetchRolesFromApi(): Promise<Role[]> {
       // Strip <font> tags but keep the content inside them
       rawHtml = rawHtml.replace(/<\/?font[^>]*>/gi, '')
 
-      // Clean up messy Zoho HTML artifacts (non-breaking spaces, empty trailing br tags, empty span paragraphs)
-      rawHtml = rawHtml.replace(/&nbsp;/gi, ' ')
-      rawHtml = rawHtml.replace(/<br\s*\/?>\s*(?=<\/div>|<\/p>)/gi, '')
-      rawHtml = rawHtml.replace(/<(p|div)[^>]*>(?:\s|<span[^>]*>|<\/span>|<br\s*\/?>|&nbsp;)*<\/\1>/gi, '')
+      // Strip any paragraph or div whose text content is empty / whitespace
+      rawHtml = rawHtml.replace(/<(p|div)[^>]*>(.*?)(?:<\/p>|<\/div>)/gi, (fullMatch, tag, inner) => {
+        const text = inner.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim()
+        if (text.length === 0) {
+          return ''
+        }
+        return fullMatch
+      })
       rawHtml = rawHtml.replace(/(?:<br\s*\/?>\s*){2,}/gi, '<br>')
 
-      // 1. Convert standalone bold lines / paragraph headings to <h3>
+      // 1. Convert standalone bold section titles (in paragraphs or break lines) to <h3>
+      const isHeadingText = (text: string) => {
+        return text.length >= 2 && text.length <= 50 && !text.endsWith('.') && !/^[-•\d]/i.test(text) && !/\d+\s*(gb|mbps|ram|years)/i.test(text)
+      }
+
       rawHtml = rawHtml.replace(/<(div|p)[^>]*>(.*?)(?:<\/div>|<\/p>)/gi, (fullMatch, tag, inner) => {
         const cleanText = inner.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim()
-        if ((inner.includes('<b>') || inner.includes('<strong>')) && cleanText.length >= 2 && cleanText.length <= 70 && !cleanText.endsWith('.')) {
+        if ((inner.includes('<b>') || inner.includes('<strong>')) && isHeadingText(cleanText)) {
           return `\n<h3>${cleanText}</h3>\n`
         }
         return fullMatch
+      })
+
+      rawHtml = rawHtml.replace(/(?:<br\s*\/?>|\n|^)\s*(?:<b>|<strong>)\s*([^<]{2,50}?)\s*(?:<\/b>|<\/strong>)\s*(?=<br\s*\/?>|\n|$)/gi, (match, headingText) => {
+        const cleanText = headingText.replace(/&nbsp;/g, ' ').trim()
+        if (isHeadingText(cleanText)) {
+          return `\n<h3>${cleanText}</h3>\n`
+        }
+        return match
       })
 
       // 3. Format plain text lists (- item or • item) into HTML <ul><li>
