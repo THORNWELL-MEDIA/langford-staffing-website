@@ -15,6 +15,8 @@ interface RouteParams {
   params: Promise<{ slug: string }>
 }
 
+export const dynamicParams = true
+
 export async function generateStaticParams() {
   const slugs = await getAllRoleSlugs()
   return slugs.map((slug) => ({ slug }))
@@ -166,7 +168,7 @@ export default async function CareerRolePage({ params }: RouteParams) {
                 </div>
 
                 <div className="flex flex-wrap gap-3 lg:pb-1">
-                  <ApplyButton role={role.title} jobId={role.jobId} jobOpeningId={role.jobOpeningId} workType={role.workType} />
+                  <ApplyButton role={role.title} jobId={role.jobId} jobOpeningId={role.jobOpeningId} locId={role.locId} workType={role.workType} />
                 </div>
               </div>
             </div>
@@ -219,30 +221,44 @@ export default async function CareerRolePage({ params }: RouteParams) {
                 <>
                   <style dangerouslySetInnerHTML={{
                     __html: `
-                    .job-desc p > strong:only-child,
-                    .job-desc p > b:only-child,
-                    .job-desc div > strong:only-child,
-                    .job-desc div > b:only-child,
-                    .job-desc p > span > strong:only-child,
-                    .job-desc p > span > b:only-child,
-                    .job-desc h3 {
-                      display: block;
-                      font-size: 1.125rem;
-                      font-weight: 800;
-                      color: #052846;
-                      margin-top: 2.5rem;
-                      margin-bottom: 0.75rem;
-                      text-transform: uppercase;
-                      letter-spacing: 0.05em;
-                      border-bottom: 2px solid #FF9900;
-                      padding-bottom: 0.25rem;
-                      width: fit-content;
+                    .job-desc h1,
+                    .job-desc h2,
+                    .job-desc h3,
+                    .job-desc h4 {
+                      display: block !important;
+                      font-size: 1.125rem !important;
+                      font-weight: 800 !important;
+                      color: #052846 !important;
+                      margin-top: 2rem !important;
+                      margin-bottom: 0.75rem !important;
+                      text-transform: uppercase !important;
+                      letter-spacing: 0.05em !important;
+                      border-bottom: 2px solid #FF9900 !important;
+                      padding-bottom: 0.25rem !important;
+                      width: fit-content !important;
                     }
-                    .job-desc h1, .job-desc h2, .job-desc h4 {
-                      color: #052846;
-                      font-weight: 800;
-                      margin-top: 2.5rem;
-                      margin-bottom: 0.75rem;
+                    .job-desc p,
+                    .job-desc div {
+                      margin-top: 0.25rem !important;
+                      margin-bottom: 0.5rem !important;
+                    }
+                    .job-desc p strong,
+                    .job-desc p b,
+                    .job-desc div strong,
+                    .job-desc div b,
+                    .job-desc li strong,
+                    .job-desc li b,
+                    .job-desc span strong,
+                    .job-desc span b {
+                      display: inline !important;
+                      font-size: inherit !important;
+                      font-weight: 700 !important;
+                      color: inherit !important;
+                      margin: 0 !important;
+                      padding: 0 !important;
+                      border: none !important;
+                      text-transform: none !important;
+                      width: auto !important;
                     }
                     .job-desc ul {
                       list-style-type: none !important;
