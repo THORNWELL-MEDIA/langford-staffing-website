@@ -15,6 +15,8 @@ interface RouteParams {
   params: Promise<{ slug: string }>
 }
 
+export const dynamicParams = true
+
 export async function generateStaticParams() {
   const slugs = await getAllRoleSlugs()
   return slugs.map((slug) => ({ slug }))
@@ -166,7 +168,7 @@ export default async function CareerRolePage({ params }: RouteParams) {
                 </div>
 
                 <div className="flex flex-wrap gap-3 lg:pb-1">
-                  <ApplyButton role={role.title} jobId={role.jobId} jobOpeningId={role.jobOpeningId} workType={role.workType} />
+                  <ApplyButton role={role.title} jobId={role.jobId} jobOpeningId={role.jobOpeningId} locId={role.locId} workType={role.workType} />
                 </div>
               </div>
             </div>
@@ -219,42 +221,66 @@ export default async function CareerRolePage({ params }: RouteParams) {
                 <>
                   <style dangerouslySetInnerHTML={{
                     __html: `
-                    .job-desc p > strong:only-child,
-                    .job-desc p > b:only-child,
-                    .job-desc div > strong:only-child,
-                    .job-desc div > b:only-child,
-                    .job-desc p > span > strong:only-child,
-                    .job-desc p > span > b:only-child,
-                    .job-desc h3 {
-                      display: block;
-                      font-size: 1.125rem;
-                      font-weight: 800;
-                      color: #052846;
-                      margin-top: 2.5rem;
-                      margin-bottom: 0.75rem;
-                      text-transform: uppercase;
-                      letter-spacing: 0.05em;
-                      border-bottom: 2px solid #FF9900;
-                      padding-bottom: 0.25rem;
-                      width: fit-content;
+                    .job-desc h1,
+                    .job-desc h2,
+                    .job-desc h3,
+                    .job-desc h4,
+                    .job-desc.prose h1,
+                    .job-desc.prose h2,
+                    .job-desc.prose h3,
+                    .job-desc.prose h4 {
+                      display: block !important;
+                      font-size: 1.125rem !important;
+                      font-weight: 800 !important;
+                      color: #052846 !important;
+                      margin-top: 1.5rem !important;
+                      margin-bottom: 0.5rem !important;
+                      text-transform: uppercase !important;
+                      letter-spacing: 0.05em !important;
+                      border-bottom: 2px solid #FF9900 !important;
+                      padding-bottom: 0.25rem !important;
+                      width: fit-content !important;
                     }
-                    .job-desc h1, .job-desc h2, .job-desc h4 {
-                      color: #052846;
-                      font-weight: 800;
-                      margin-top: 2.5rem;
-                      margin-bottom: 0.75rem;
+                    .job-desc p,
+                    .job-desc div,
+                    .job-desc.prose p,
+                    .job-desc.prose div {
+                      margin-top: 0 !important;
+                      margin-bottom: 0.5rem !important;
+                    }
+                    .job-desc p strong,
+                    .job-desc p b,
+                    .job-desc div strong,
+                    .job-desc div b,
+                    .job-desc li strong,
+                    .job-desc li b,
+                    .job-desc li h1,
+                    .job-desc li h2,
+                    .job-desc li h3,
+                    .job-desc li h4,
+                    .job-desc span strong,
+                    .job-desc span b {
+                      display: inline !important;
+                      font-size: inherit !important;
+                      font-weight: 700 !important;
+                      color: inherit !important;
+                      margin: 0 !important;
+                      padding: 0 !important;
+                      border: none !important;
+                      text-transform: none !important;
+                      width: auto !important;
                     }
                     .job-desc ul {
                       list-style-type: none !important;
                       padding-left: 0 !important;
-                      margin-top: 0.75rem;
-                      margin-bottom: 1.5rem;
+                      margin-top: 0.5rem !important;
+                      margin-bottom: 1rem !important;
                     }
                     .job-desc ul > li {
                       position: relative;
                       padding-left: 1.25rem !important;
-                      margin-top: 0.5rem;
-                      margin-bottom: 0.5rem;
+                      margin-top: 0.35rem !important;
+                      margin-bottom: 0.35rem !important;
                     }
                     .job-desc ul > li::before {
                       content: "";
@@ -271,7 +297,7 @@ export default async function CareerRolePage({ params }: RouteParams) {
                     }
                   `}} />
                   <div
-                    className="job-desc prose prose-p:text-brand-ink prose-li:text-brand-ink max-w-none prose-p:leading-[1.8] prose-p:text-[15px] prose-li:text-[15px]"
+                    className="job-desc prose prose-p:my-2 prose-p:text-brand-ink prose-li:text-brand-ink max-w-none prose-p:leading-[1.7] prose-p:text-[15px] prose-li:text-[15px]"
                     dangerouslySetInnerHTML={{ __html: role.htmlDescription }}
                   />
                 </>
