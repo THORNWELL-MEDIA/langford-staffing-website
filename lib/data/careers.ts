@@ -183,7 +183,7 @@ export async function fetchRolesFromApi(): Promise<Role[]> {
 
       // Clean up headings inside list items so list items never render as section headings
       rawHtml = rawHtml.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (match, inner) => {
-        const cleanedInner = inner.replace(/<\/?h[1-6][^>]*>/gi, (tag) => (tag.startsWith('</') ? '</b>' : '<b>'))
+        const cleanedInner = inner.replace(/<\/?h[1-6][^>]*>/gi, (tag: string) => (tag.startsWith('</') ? '</b>' : '<b>'))
         return match.replace(inner, cleanedInner)
       })
 
