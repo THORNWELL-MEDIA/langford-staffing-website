@@ -258,6 +258,12 @@ export default async function CareerRolePage({ params }: RouteParams) {
                     .job-desc li h2,
                     .job-desc li h3,
                     .job-desc li h4,
+                    .job-desc.prose li strong,
+                    .job-desc.prose li b,
+                    .job-desc.prose li h1,
+                    .job-desc.prose li h2,
+                    .job-desc.prose li h3,
+                    .job-desc.prose li h4,
                     .job-desc span strong,
                     .job-desc span b {
                       display: inline !important;
@@ -268,29 +274,43 @@ export default async function CareerRolePage({ params }: RouteParams) {
                       padding: 0 !important;
                       border: none !important;
                       text-transform: none !important;
+                      letter-spacing: normal !important;
                       width: auto !important;
                     }
-                    .job-desc ul {
+                    .job-desc ul,
+                    .job-desc ol {
                       list-style-type: none !important;
                       padding-left: 0 !important;
+                      padding-right: 0 !important;
+                      padding-inline-start: 0 !important;
+                      margin-left: 0 !important;
                       margin-top: 0.5rem !important;
                       margin-bottom: 1rem !important;
                     }
-                    .job-desc ul > li {
-                      position: relative;
+                    .job-desc ul > li,
+                    .job-desc ol > li {
+                      position: relative !important;
                       padding-left: 1.25rem !important;
                       margin-top: 0.35rem !important;
                       margin-bottom: 0.35rem !important;
                     }
+                    .job-desc ul > li > p,
+                    .job-desc ul > li > div,
+                    .job-desc ol > li > p,
+                    .job-desc ol > li > div {
+                      margin: 0 !important;
+                      padding: 0 !important;
+                      display: inline !important;
+                    }
                     .job-desc ul > li::before {
-                      content: "";
-                      position: absolute;
-                      left: 0;
-                      top: 0.65rem;
-                      width: 0.375rem;
-                      height: 0.375rem;
-                      border-radius: 9999px;
-                      background-color: #FF9900;
+                      content: "" !important;
+                      position: absolute !important;
+                      left: 0.125rem !important;
+                      top: 0.65rem !important;
+                      width: 0.375rem !important;
+                      height: 0.375rem !important;
+                      border-radius: 9999px !important;
+                      background-color: #FF9900 !important;
                     }
                     .job-desc > *:first-child {
                       margin-top: 0 !important;

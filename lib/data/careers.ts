@@ -126,8 +126,8 @@ export async function fetchRolesFromApi(): Promise<Role[]> {
         rawHtml = rawHtml.replace(regex, 'Our Client')
       })
 
-      // Selectively strip font-size, font-family, and colors to preserve other formatting (like bold/headings)
-      const styleStripRegex = /(font-family|font-size|color|background-color|background|line-height)\s*:[^;]+;?/gi
+      // Selectively strip font-size, font-family, colors, padding, margin, and list-style properties from inline styles
+      const styleStripRegex = /(font-family|font-size|color|background-color|background|line-height|padding|padding-inline-start|padding-left|padding-right|margin|margin-left|margin-right|list-style|list-style-type|list-style-position|text-indent)\s*:[^;]+;?/gi
 
       const cleanStyles = (html: string) => {
         let cleanedHtml = html.replace(/style="([^"]*)"/gi, (match, styles) => {
@@ -180,6 +180,12 @@ export async function fetchRolesFromApi(): Promise<Role[]> {
       // 3. Format plain text lists (- item or • item) into HTML <ul><li>
       rawHtml = rawHtml.replace(/(?:<div[^>]*>|<p[^>]*>|<br\s*\/?>|\n|^)\s*[-•]\s+(.*?)\s*(?:<\/div>|<\/p>|<br\s*\/?>|\n|$)/gi, '\n<li>$1</li>\n')
       rawHtml = rawHtml.replace(/(?:\n*<li>.*?<\/li>\n*)+/g, (match) => `\n<ul>${match}</ul>\n`)
+
+      // Clean up headings inside list items so list items never render as section headings
+      rawHtml = rawHtml.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (match, inner) => {
+        const cleanedInner = inner.replace(/<\/?h[1-6][^>]*>/gi, (tag: string) => (tag.startsWith('</') ? '</b>' : '<b>'))
+        return match.replace(inner, cleanedInner)
+      })
 
       if (clientName && !clientName.toLowerCase().includes('langford')) {
         rawHtml += '\n<p>#LI-DNI</p>'
