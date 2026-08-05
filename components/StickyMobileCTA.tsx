@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, ArrowRight } from "lucide-react";
 import { NAP } from "@/lib/constants";
 import { cn } from "@/lib/cn";
@@ -12,6 +13,7 @@ import { cn } from "@/lib/cn";
  */
 export default function StickyMobileCTA() {
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 320);
@@ -19,6 +21,10 @@ export default function StickyMobileCTA() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Hide on job detail pages (/careers/[slug])
+  const isJobDetailPage = pathname?.startsWith('/careers/') && pathname !== '/careers' && pathname !== '/careers/';
+  if (isJobDetailPage) return null;
 
   return (
     <div
