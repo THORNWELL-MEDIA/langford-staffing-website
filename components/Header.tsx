@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, User, Briefcase } from "lucide-react";
 import { BRAND, NAP } from "@/lib/constants";
 import Logo from "./Logo";
 import { cn } from "@/lib/cn";
@@ -12,12 +12,14 @@ const NAV = [
   { href: "/locations/", label: "Locations" },
   { href: "/careers/", label: "Careers" },
   { href: "/insights/", label: "Insights" },
-  { href: "/about/", label: "About" }
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" }
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -26,17 +28,58 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when mobile nav open
+  // Lock body scroll when mobile nav open or login open
   useEffect(() => {
-    if (open) document.body.style.overflow = "hidden";
+    if (open || loginOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, loginOpen]);
 
   return (
     <>
+      {/* Login Popup */}
+      {loginOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-brand-navy/70 p-4 backdrop-blur-md transition-all">
+          <div className="relative w-full max-w-md overflow-hidden rounded-xl bg-white shadow-2xl">
+            <button
+              onClick={() => setLoginOpen(false)}
+              className="absolute right-4 top-4 z-10 rounded-full bg-brand-navy/5 p-1.5 text-brand-navy/60 transition-colors hover:bg-brand-navy/10 hover:text-brand-navy"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            
+            <div className="flex flex-col sm:flex-row">
+              <a
+                href="https://career.langfordstaffing.com/login"
+                className="group relative flex flex-1 flex-col items-center justify-center gap-3 bg-white p-10 text-center no-underline transition-colors hover:bg-brand-paper-warm sm:border-r sm:border-brand-line/60 border-b border-brand-line/60 sm:border-b-0"
+              >
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand-navy group-hover:text-white">
+                  <User className="h-7 w-7" />
+                </div>
+                <div>
+                  <span className="block text-lg font-bold text-brand-navy">Candidate</span>
+                  <span className="mt-1 block text-[13px] font-medium text-brand-navy/60">Find your next role</span>
+                </div>
+              </a>
+              <a
+                href="https://career.langfordstaffing.com/recruiter/login"
+                className="group relative flex flex-1 flex-col items-center justify-center gap-3 bg-white p-10 text-center no-underline transition-colors hover:bg-brand-paper-warm"
+              >
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand-navy group-hover:text-white">
+                  <Briefcase className="h-7 w-7" />
+                </div>
+                <div>
+                  <span className="block text-lg font-bold text-brand-navy">Recruiter</span>
+                  <span className="mt-1 block text-[13px] font-medium text-brand-navy/60">Hire great talent</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Executive briefing strip — navy, all caps, single hairline */}
       <div className="hidden border-b border-white/10 bg-brand-navy text-white md:block">
         <div className="container-prose flex items-center justify-between py-2 text-[11px] uppercase tracking-[0.16em]">
@@ -96,19 +139,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href={`tel:${NAP.phoneE164}`}
-              className="hidden items-center gap-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-brand-navy no-underline hover:text-brand-saffron-dark md:inline-flex"
-            >
-              <Phone className="h-3 w-3" /> <span className="tabular">{NAP.phoneDisplay}</span>
-            </a>
-            <Link
-              href="/contact/"
+            <button
+              onClick={() => setLoginOpen(true)}
               className="hidden items-center gap-1.5 rounded-sm bg-brand-navy px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white no-underline transition hover:bg-brand-navy-dark sm:inline-flex"
             >
-              Talk to a recruiter
-              <ArrowRight className="h-3 w-3" />
-            </Link>
+              <User className="h-3 w-3" />
+              Login
+            </button>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
@@ -137,19 +174,16 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="mt-4 grid gap-3 border-t border-brand-line pt-6">
-                  <Link
-                    href="/contact/"
-                    onClick={() => setOpen(false)}
-                    className="btn-primary w-full"
+                  <button
+                    onClick={() => {
+                      setOpen(false);
+                      setLoginOpen(true);
+                    }}
+                    className="btn-primary w-full flex items-center justify-center gap-2"
                   >
-                    Talk to a recruiter
-                  </Link>
-                  <a
-                    href={`tel:${NAP.phoneE164}`}
-                    className="mt-2 inline-flex items-center justify-center gap-1.5 text-sm font-medium text-brand-ink-soft no-underline tabular"
-                  >
-                    <Phone className="h-3.5 w-3.5" /> {NAP.phoneDisplay}
-                  </a>
+                    <User className="h-4 w-4" />
+                    Login
+                  </button>
                 </div>
               </div>
             </div>
@@ -159,3 +193,4 @@ export default function Header() {
     </>
   );
 }
+
