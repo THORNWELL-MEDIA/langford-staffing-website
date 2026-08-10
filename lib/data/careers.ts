@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import { cache } from 'react'
 
 export interface Role {
   /** Unique URL identifier (lowercase + dashes, no spaces). */
@@ -89,11 +89,11 @@ function getCompanySlugPrefix(clientName?: string): string {
   return name.split(/[\s_\-]+/).filter(Boolean).map(w => w[0].toLowerCase()).join('')
 }
 
-export async function fetchRolesFromApi(): Promise<Role[]> {
+export const fetchRolesFromApi = cache(async (): Promise<Role[]> => {
   const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || 'https://phpstack-1217932-6516253.cloudwaysapps.com'
   const url = `${baseUrl}/api/v1/job-postings`
   try {
-    const res = await fetch(url, { cache: 'no-store' })
+    const res = await fetch(url, { next: { revalidate: 3600 } })
     if (!res.ok) {
       console.error('Failed to fetch roles', res.status)
       return []
@@ -112,7 +112,7 @@ export async function fetchRolesFromApi(): Promise<Role[]> {
         'Revun',
         'Bridgepoint'
       ]
-      
+
       if (clientName && !clientName.toLowerCase().includes('langford')) {
         namesToReplace.push(clientName)
       }
@@ -258,7 +258,7 @@ export async function fetchRolesFromApi(): Promise<Role[]> {
     console.error('Failed to fetch roles from API', error)
     return []
   }
-}
+})
 
 /** Find a role by slug. Returns undefined if not found. */
 export async function getRoleBySlug(slug: string): Promise<Role | undefined> {
@@ -269,7 +269,8 @@ export async function getRoleBySlug(slug: string): Promise<Role | undefined> {
 /** All slugs — used by generateStaticParams on the dynamic route. */
 export async function getAllRoleSlugs(): Promise<string[]> {
   const roles = await fetchRolesFromApi()
-  return roles.map((r) => r.slug)
+  const slugs = roles.map((r) => r.slug)
+  return Array.from(new Set(slugs))
 }
 
 export interface CityGroup {
