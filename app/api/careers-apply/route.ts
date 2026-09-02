@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone, linkedin, resumeUrl, whyYou, referral, role } = body;
+    const { firstName, lastName, email, phone, linkedin, resumeUrl, portfolio_link, whyYou, referral, role } = body;
 
     if (!firstName || !lastName || !email || !role) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -28,6 +28,7 @@ export async function POST(req: NextRequest) {
           <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Phone</td><td style="padding:8px;border-bottom:1px solid #eee">${phone || "Not provided"}</td></tr>
           <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">LinkedIn</td><td style="padding:8px;border-bottom:1px solid #eee">${linkedin ? `<a href="${linkedin}">${linkedin}</a>` : "Not provided"}</td></tr>
           <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Resume</td><td style="padding:8px;border-bottom:1px solid #eee">${resumeUrl ? `<a href="${resumeUrl}">${resumeUrl}</a>` : "Not provided"}</td></tr>
+          ${portfolio_link ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Portfolio Link</td><td style="padding:8px;border-bottom:1px solid #eee"><a href="${portfolio_link}">${portfolio_link}</a></td></tr>` : ""}
           <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Why this role</td><td style="padding:8px;border-bottom:1px solid #eee">${whyYou || "Not provided"}</td></tr>
           <tr><td style="padding:8px;font-weight:bold">How they heard</td><td style="padding:8px">${referral || "Not provided"}</td></tr>
         </table>
