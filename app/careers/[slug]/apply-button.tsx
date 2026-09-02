@@ -56,6 +56,40 @@ export function ApplyButton({
   )
 }
 
+function getSpecialPortfolioConfig(role: string) {
+  if (!role) return null
+  const r = role.toLowerCase().replace(/\s+/g, ' ').trim()
+
+  const isSocialMediaManager =
+    r === 'group social media & content manager' ||
+    r === 'group social media and content manager' ||
+    (r.includes('group social media') && r.includes('content manager'))
+
+  if (isSocialMediaManager) {
+    return {
+      label: 'Portfolio or Work-Sample Link',
+      helperText:
+        'Provide an accessible link to content you personally created, brands or accounts you managed, and examples of different brand styles. Ensure no login or access request is required.',
+      placeholder: 'https://...',
+    }
+  }
+
+  const isSeoManager =
+    r === 'senior seo manager' ||
+    r.includes('senior seo manager')
+
+  if (isSeoManager) {
+    return {
+      label: 'SEO Portfolio or Case Study Link',
+      helperText:
+        'Provide an accessible link showing websites or brands whose SEO you personally managed, your exact contribution, relevant content samples, and measurable SEO or online-reputation results. Ensure no login or access request is required.',
+      placeholder: 'https://...',
+    }
+  }
+
+  return null
+}
+
 function ApplyModal({
   role,
   jobId,
@@ -71,6 +105,7 @@ function ApplyModal({
   workType?: string
   onClose: () => void
 }) {
+  const specialPortfolio = getSpecialPortfolioConfig(role)
   const isRemoteForm = !workType || /remote|hybrid/i.test(String(workType))
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
@@ -187,6 +222,24 @@ function ApplyModal({
           }
         } catch {
           errors.behance_url = 'Please enter a valid URL (e.g. https://behance.net/username)'
+        }
+      }
+    }
+
+    if (specialPortfolio) {
+      const rawUrl = ((fd.get('portfolio_link') as string) || '').trim()
+      if (!rawUrl) {
+        errors.portfolio_link = 'This field is required'
+      } else {
+        let urlToTest = rawUrl
+        if (!/^https?:\/\//i.test(urlToTest)) {
+          urlToTest = 'https://' + urlToTest
+        }
+        const isValidUrl = /^https?:\/\/([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:\d+)?(\/.*)?$/i.test(urlToTest)
+        if (!isValidUrl) {
+          errors.portfolio_link = 'Please enter a valid URL (e.g. https://example.com/portfolio)'
+        } else {
+          fd.set('portfolio_link', urlToTest)
         }
       }
     }
@@ -778,6 +831,27 @@ function ApplyModal({
                           </div>
                         )
                       })()}
+
+                      {specialPortfolio && (
+                        <div>
+                          <label className="mb-1 block text-xs font-semibold text-brand-ink/70">
+                            {specialPortfolio.label} <span className="text-red-500">*</span>
+                          </label>
+                          <p className="mb-1.5 text-xs text-brand-ink/60 leading-relaxed">
+                            {specialPortfolio.helperText}
+                          </p>
+                          <input
+                            name="portfolio_link"
+                            type="url"
+                            required
+                            className={getInputClass('portfolio_link')}
+                            placeholder={specialPortfolio.placeholder}
+                          />
+                          {fieldErrors['portfolio_link'] && (
+                            <p className="mt-1 text-xs text-red-500">{fieldErrors['portfolio_link']}</p>
+                          )}
+                        </div>
+                      )}
 
                       <div>
                         <label className="mb-1 block text-xs font-semibold text-brand-ink/70">
