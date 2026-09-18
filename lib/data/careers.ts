@@ -206,8 +206,20 @@ export const fetchRolesFromApi = cache(async (): Promise<Role[]> => {
 
       const workTypeRaw = job.Work_Type ? String(job.Work_Type).trim() : ''
       const jobTypeRaw = job.Job_Type ? String(job.Job_Type).trim() : ''
+      const workTypeLower = workTypeRaw.toLowerCase()
+      const jobTypeLower = jobTypeRaw.toLowerCase()
 
-      const employmentTypeDisplay = workTypeRaw || 'Full-Time'
+      let employmentTypeDisplay = workTypeRaw || 'Full-Time'
+      if (jobTypeRaw) {
+        if (workTypeRaw) {
+          if (!workTypeLower.includes(jobTypeLower)) {
+            employmentTypeDisplay = `${workTypeRaw} · ${jobTypeRaw}`
+          }
+        } else {
+          employmentTypeDisplay = jobTypeRaw
+        }
+      }
+
       const workArrangementDisplay = jobTypeRaw
 
       const locParts = []
@@ -216,8 +228,8 @@ export const fetchRolesFromApi = cache(async (): Promise<Role[]> => {
       if (job.Country) locParts.push(job.Country)
 
       const locationDisplay = locParts.length > 0
-        ? (workArrangementDisplay ? `${locParts.join(', ')} · ${workArrangementDisplay}` : locParts.join(', '))
-        : (workArrangementDisplay || 'Remote')
+        ? locParts.join(', ')
+        : (jobTypeRaw || 'Remote')
 
       const prefix = getCompanySlugPrefix(job.Client_Name)
       const uniqueSlug = `${prefix}-${job.slug}`
