@@ -2,6 +2,7 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import { X, CheckCircle2, Loader2 } from "lucide-react";
+import CityLocationInput, { type ResolvedLocation } from "./CityLocationInput";
 
 interface Props {
   role: string;
@@ -45,6 +46,8 @@ function getSpecialPortfolioConfig(role: string) {
 export default function CareersApplyModal({ role, onClose }: Props) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [location, setLocation] = useState<ResolvedLocation | null>(null);
+  const [locationError, setLocationError] = useState("");
 
   const specialPortfolio = getSpecialPortfolioConfig(role);
 
@@ -62,7 +65,15 @@ export default function CareersApplyModal({ role, onClose }: Props) {
     e.preventDefault();
     setStatus("loading");
     setErrorMsg("");
+    setLocationError("");
     const fd = new FormData(e.currentTarget);
+
+    if (!location) {
+      setLocationError("Please select your city or province from the list");
+      setErrorMsg("Please select your city or province from the list");
+      setStatus("error");
+      return;
+    }
 
     let portfolioLink = ((fd.get("portfolio_link") as string) || "").trim();
     if (specialPortfolio) {
@@ -88,6 +99,13 @@ export default function CareersApplyModal({ role, onClose }: Props) {
       lastName: fd.get("lastName"),
       email: fd.get("email"),
       phone: fd.get("phone"),
+      city: location.type === "city" ? location.city : (location.state || ""),
+      state: location.state,
+      province: location.province || location.state,
+      state_province: location.state_province || location.state,
+      country: location.country,
+      country_code: location.countryCode,
+      residential_location: location.residentialLocation || location.displayText,
       linkedin: fd.get("linkedin"),
       resumeUrl: fd.get("resumeUrl"),
       portfolio_link: portfolioLink || undefined,
@@ -163,6 +181,18 @@ export default function CareersApplyModal({ role, onClose }: Props) {
                 <label className="block text-xs font-semibold text-brand-ink-soft mb-1.5">Phone</label>
                 <input name="phone" type="tel" className="w-full border border-brand-line px-3 py-2.5 text-sm text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-saffron bg-brand-paper" placeholder="+1 416 555 0100" />
               </div>
+            </div>
+            <div>
+              <CityLocationInput
+                value={location}
+                onChange={(loc) => {
+                  setLocation(loc);
+                  if (loc) setLocationError("");
+                }}
+                error={locationError}
+                required
+                label="City / Residential Location"
+              />
             </div>
             <div>
               <label className="block text-xs font-semibold text-brand-ink-soft mb-1.5">LinkedIn Profile URL</label>

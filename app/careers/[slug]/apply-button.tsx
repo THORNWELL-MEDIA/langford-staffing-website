@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import PhoneInput, { isValidPhoneNumber, type Country } from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
+import { CityLocationInput, type ResolvedLocation } from '@/components/CityLocationInput'
 
 interface Props {
   role: string
@@ -115,6 +116,7 @@ function ApplyModal({
   const [num2, setNum2] = useState(0)
   const [phone, setPhone] = useState('')
   const [countryCode, setCountryCode] = useState<string>('US')
+  const [location, setLocation] = useState<ResolvedLocation | null>(null)
   const [businessType, setBusinessType] = useState('')
   const [hasVehicle, setHasVehicle] = useState('')
 
@@ -179,6 +181,10 @@ function ApplyModal({
 
     if (!phone || !isValidPhoneNumber(phone)) {
       errors.phone = 'Please enter a valid phone number'
+    }
+
+    if (!location) {
+      errors.residential_location = 'Please select your city or province from the list'
     }
 
     const resume = fd.get('resume') as File | null
@@ -310,6 +316,16 @@ function ApplyModal({
 
     // Process mobile
     fd.set('mobile', phone)
+
+    if (location) {
+      fd.set('city', location.type === 'city' ? location.city : (location.state || ''))
+      fd.set('state', location.state)
+      fd.set('province', location.province || location.state)
+      fd.set('state_province', location.state_province || location.state)
+      fd.set('country', location.country)
+      fd.set('country_code', location.countryCode)
+      fd.set('residential_location', location.residentialLocation || location.displayText)
+    }
 
     const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || 'https://phpstack-1217932-6516253.cloudwaysapps.com'
 
@@ -513,6 +529,25 @@ function ApplyModal({
                           </div>
                           {fieldErrors['phone'] && <p className="mt-1 text-xs text-red-500">{fieldErrors['phone']}</p>}
                         </div>
+                      </div>
+
+                      <div>
+                        <CityLocationInput
+                          value={location}
+                          onChange={(loc) => {
+                            setLocation(loc)
+                            if (loc && fieldErrors.residential_location) {
+                              setFieldErrors((prev) => {
+                                const next = { ...prev }
+                                delete next.residential_location
+                                return next
+                              })
+                            }
+                          }}
+                          error={fieldErrors['residential_location']}
+                          required
+                          label="City / Residential Location"
+                        />
                       </div>
 
                       {isRemoteForm && (

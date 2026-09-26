@@ -53,6 +53,8 @@ export default function Header() {
             <div className="flex flex-col sm:flex-row">
               <a
                 href="https://career.langfordstaffing.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex flex-1 flex-col items-center justify-center gap-3 bg-white p-10 text-center no-underline transition-colors hover:bg-brand-paper-warm sm:border-r sm:border-brand-line/60 border-b border-brand-line/60 sm:border-b-0"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand-navy group-hover:text-white">
@@ -65,6 +67,8 @@ export default function Header() {
               </a>
               <a
                 href="https://career.langfordstaffing.com/recruiter/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex flex-1 flex-col items-center justify-center gap-3 bg-white p-10 text-center no-underline transition-colors hover:bg-brand-paper-warm"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-navy/5 text-brand-navy transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand-navy group-hover:text-white">
